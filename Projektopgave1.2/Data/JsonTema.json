@@ -1,0 +1,24 @@
+[
+  {
+    "Name": "Roskilde Festival",
+    "Id": 1,
+    "ImageName": "roskilde_stage.jfif",
+    "Description": "A week of music and beer",
+    "Udstillinger": null
+  },
+  {
+    "Name": "Lys",
+    "Id": 2,
+    "ImageName": "lys.jpg",
+    "Description": "The light of music",
+    "Udstillinger": null
+  },
+  {
+    "Name": "D.I.Y",
+    "Id": 3,
+    "ImageName": "vinyl.jpg",
+    "Description": "Do it yourself",
+    "Udstillinger": null
+  }
+
+]

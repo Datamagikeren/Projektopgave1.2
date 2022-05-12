@@ -8,6 +8,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Projektopgave1._2.Repositories;
+using Projektopgave1._2.Interfaces;
+
 
 namespace Projektopgave1._2
 {
@@ -24,6 +27,7 @@ namespace Projektopgave1._2
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddTransient<ITemaRepository, JsonTemaRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
