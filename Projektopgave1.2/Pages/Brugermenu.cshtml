@@ -5,12 +5,12 @@
 
 
 <div class="container">
-    <div class="row">
+    <div class="row-4">
 
         @foreach (var item in Model.Temaer)
         {
 
-            <div class="collum">
+            <div class="col-3">
                 <div class="card bg-dark text-white">
                     <img src="~/images/@item.ImageName" alt="Card image">
                     
@@ -32,7 +32,6 @@
         {
 
             <div class="col">@item.Name</div>
-            <div class="w-100"></div>
             <div class="col">@item.Name</div>
         }
     </div>
