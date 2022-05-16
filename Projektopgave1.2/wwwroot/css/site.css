@@ -105,3 +105,7 @@ body {
     font-family: 'Times New Roman', sans-serif;
     font-size: 20px;
 }
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
