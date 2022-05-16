@@ -1,0 +1,41 @@
+﻿@page
+@model Projektopgave1._2.BrugermenuModel
+@{
+}
+
+
+<div class="container">
+    <div class="row">
+
+        @foreach (var item in Model.Temaer)
+        {
+
+            <div class="collum">
+                <div class="card bg-dark text-white">
+                    <img src="~/images/@item.ImageName" alt="Card image">
+                    
+                        <h5>@item.Name</h5>
+                        <p> @item.Description</p>
+                        <div class="w-100"></div>
+
+                    
+                </div>
+            </div>
+        }
+    </div>
+
+</div>
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model.Temaer)
+        {
+
+            <div class="col">@item.Name</div>
+            <div class="w-100"></div>
+            <div class="col">@item.Name</div>
+        }
+    </div>
+</div>
+
+
