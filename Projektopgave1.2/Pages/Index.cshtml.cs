@@ -12,6 +12,7 @@ namespace Projektopgave1._2.Pages
 {
     public class IndexModel : PageModel
     {
+        private ITemaRepository repo;
         private readonly ILogger<IndexModel> _logger;
 
         public IndexModel(ILogger<IndexModel> logger)
