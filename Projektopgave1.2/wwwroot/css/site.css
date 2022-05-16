@@ -72,10 +72,33 @@ body {
 
 .column {
     float: left;
-    width: 33.3%;
+    width: 33%;
     padding: 5px;
 }
 
 .row::after {
     content: "";
+}
+
+.containerBruger {
+    position: relative;
+    text-align: center;
+    color: white;
+    font: caption;
+}
+
+.centeredTitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: ;
+}
+
+.centeredDesrib {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font: italic;
 }

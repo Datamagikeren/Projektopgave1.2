@@ -4,18 +4,18 @@
 }
 
 
-<div class="container">
+<div class="containerBruger">
     <div class="row">
 
         @foreach (var item in Model.Temaer)
         {
 
-            <div class="column">
+            <div class="column-2 p-2">
                 <div class="card bg-dark text-white">
-                    <img src="~/images/@item.ImageName" alt="Card image">
+                    <img src="~/images/@item.ImageName" width="500" height="250" alt="Card image">
                     
-                        <h5>@item.Name</h5>
-                        <p> @item.Description</p>
+                        <h5 class="centeredTitle"><strong>@item.Name</strong></h5>
+                        <p class="centeredDesrib"><em>@item.Description</em></p>
                        
                 </div>
             </div>
