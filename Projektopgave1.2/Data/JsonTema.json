@@ -4,7 +4,8 @@
     "Id": 1,
     "ImageName": "roskilde_stage.jfif",
     "Description": "A week of music and beer",
-    "Udstillinger": null
+    "Udstillinger": null,
+    "LinkName":  "RoskildeFestival"
   },
   {
     "Name": "Lys",
