@@ -109,3 +109,18 @@ body {
     display: block;
     margin-top: 0;
 }
+body {
+    background-image: url('../images/Ragnarock2.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.imgforside {
+    width: 400px;
+    height: auto;
+}
