@@ -60,7 +60,9 @@ html {
 
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  margin-bottom: 60px;  
+  background-color: rgb(201,76,76);
+  background-size: cover;
 }
 
 .footer {
@@ -111,8 +113,10 @@ body {
 }
 .forsidebody {
     background-image: url('../images/Ragnarock2.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-size: cover;
+    /*background-repeat: no-repeat;*/
+    margin-left: 0px;   
+    
 }
 .center {
     display: block;
@@ -124,3 +128,4 @@ body {
     width: 400px;
     height: auto;
 }
+
