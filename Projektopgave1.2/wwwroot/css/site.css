@@ -109,7 +109,7 @@ body {
     display: block;
     margin-top: 0;
 }
-body {
+.forsidebody {
     background-image: url('../images/Ragnarock2.jpg');
     background-size: contain;
     background-repeat: no-repeat;
