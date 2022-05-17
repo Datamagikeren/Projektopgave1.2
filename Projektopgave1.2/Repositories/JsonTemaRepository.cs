@@ -35,9 +35,10 @@ namespace Projektopgave1._2.Repositories
         public void EditTema(Tema tema)
         {
             List<Tema> temaer = GetAllTema();
+
             if (tema != null)
             {
-                foreach(var t in GetAllTema())
+                foreach(var t in temaer)
                 {
                     if (t.Name == tema.Name)
                     {
@@ -49,6 +50,7 @@ namespace Projektopgave1._2.Repositories
                     }
                 }                
             }
+            
             JsonFileWriter.WriteToJsonTema(temaer, JsonFileName);
         }
     }
