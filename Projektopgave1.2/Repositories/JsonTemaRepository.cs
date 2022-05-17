@@ -21,5 +21,35 @@ namespace Projektopgave1._2.Repositories
             temaer.Add(tema);
             JsonFileWriter.WriteToJsonTema(temaer, JsonFileName);
         }
+        
+        
+        public Tema GetTema(int id)
+        {
+            foreach (var t in GetAllTema())
+            {
+                if (t.Id == id)
+                    return t;             
+            }
+            return new Tema();
+        }
+        public void EditTema(Tema tema)
+        {
+            List<Tema> temaer = GetAllTema();
+            if (tema != null)
+            {
+                foreach(var t in GetAllTema())
+                {
+                    if (t.Name == tema.Name)
+                    {
+                        t.Id = tema.Id;
+                        t.Name = tema.Name;
+                        t.Description = tema.Description;
+                        t.ImageName = tema.ImageName;
+                        t.LinkName = tema.LinkName;                        
+                    }
+                }                
+            }
+            JsonFileWriter.WriteToJsonTema(temaer, JsonFileName);
+        }
     }
 }

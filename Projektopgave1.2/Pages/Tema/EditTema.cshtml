@@ -1,5 +1,37 @@
 ﻿@page
-@model Projektopgave1._2.Pages.Tema.EditTemaModel
+@model Projektopgave1._2.EditTemaModel
 @{
 }
-<h3>EditTema</h3>
+<h3>Edit Tema</h3>
+
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="@Model.Tema.Id" class="control-label"></label>
+        <input asp-for="@Model.Tema.Id" class="form-control" />
+        <span asp-validation-for="@Model.Tema.Id" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Tema.Name" class="control-label"></label>
+        <input asp-for="@Model.Tema.Name" class="form-control" />
+        <span asp-validation-for="@Model.Tema.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Tema.Description" class="control-label"></label>
+        <input asp-for="@Model.Tema.Description" class="form-control" />
+        <span asp-validation-for="@Model.Tema.Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Tema.ImageName" class="control-label"></label>
+        <input asp-for="@Model.Tema.ImageName" class="form-control" />
+        <span asp-validation-for="@Model.Tema.ImageName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Tema.LinkName" class="control-label"></label>
+        <input hidden="hidden" asp-for="@Model.Tema.LinkName" class="form-control" />
+        <span asp-validation-for="@Model.Tema.LinkName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+</form>
