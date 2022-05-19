@@ -40,7 +40,7 @@ namespace Projektopgave1._2.Repositories
             {
                 foreach(var t in temaer)
                 {
-                    if (t.Name == tema.Name)
+                    if (t.Id == tema.Id)
                     {
                         t.Id = tema.Id;
                         t.Name = tema.Name;
