@@ -8,8 +8,29 @@ using Projektopgave1._2.Interfaces;
 
 namespace Projektopgave1._2.Repositories
 {
-    public class JsonTemaRepository : ITemaRepository
+    public class JsonTemaRepository : ITemaRepository, IUdstillingRepositiry
     {
+        string JsonFileName1 = @"Data\JsonUdstilling.json";
+
+        public List<Udstilling> GetAllUdstillinger()
+        {
+            return JsonFileReader.ReadJsonUdstilling(JsonFileName1);
+        }
+        public void AddUdstilling(Udstilling udstilling)
+        {
+            List<Udstilling> udstilinger = GetAllUdstillinger();
+            List<Tema> temaer = GetAllTema();
+            udstilinger.Add(udstilling);
+            foreach(var tema in temaer)
+            {
+                if (tema.Kode == udstilling.TemaKode)
+                {
+                    tema.Udstillinger.Add(udstilling);
+                }
+            }
+
+            JsonFileWriter.WriteToJsonUdstilling(udstilinger, JsonFileName1);
+        }
         string JsonFileName = @"Data\JsonTema.json";
         public List<Tema> GetAllTema()
         {
