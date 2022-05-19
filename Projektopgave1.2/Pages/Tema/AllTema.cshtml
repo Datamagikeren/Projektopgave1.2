@@ -16,34 +16,33 @@
     <tbody>
         @if (Model.Temaer.Count != 0)
         {
-@foreach (var item in Model.Temaer)
-{
-        <tr>
-            <td>
-                @item.Name
-            </td>
-            <td>
-                @item.Id
-            </td>
-            <td>
-                @item.Description
-            </td>
-            <td>
-                <img src="~/images/@item.ImageName" width="140" height="70">
-            </td>
-            <td>
-                <p>
-                    <a asp-page="EditTema"asp-route-id="@item.Id">Edit</a> |
-                    <a asp-page="DeleteTema">Delete</a> |
-                    <a asp-page="DeletePizza">Delete</a>
-                </p>
-            </td>
-
-        </tr>}}
+            @foreach (var item in Model.Temaer)
+            {
+                <tr>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @item.Id
+                    </td>
+                    <td>
+                        @item.Description
+                    </td>
+                    <td>
+                        <img src="~/images/@item.ImageName" width="140" height="70">
+                    </td>
+                    <td>
+                        <p>
+                            <a asp-page="EditTema" asp-route-id="@item.Id">Edit</a> |
+                            <a asp-page="DeleteTema">Delete</a> |
+                            <a asp-page="SeTema" asp-route-id="@item.Id"> Se Tema</a>
+                        </p>
+                    </td>
+                </tr>
+}}
     </tbody>
 </table>
 <a asp-page="/Tema/AddTema"
    class="btn btn-success btn-group-lg pull-right">
     Create event
 </a>
-
