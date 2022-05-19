@@ -28,6 +28,9 @@ namespace Projektopgave1._2
         {
             services.AddRazorPages();
             services.AddTransient<ITemaRepository, JsonTemaRepository>();
+            services.AddTransient<IUdstillingRepository, JsonUdstillingRepository>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
