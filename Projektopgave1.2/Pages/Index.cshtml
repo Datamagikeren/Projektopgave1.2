@@ -4,17 +4,24 @@
     ViewData["Title"] = "Forside";
 }
 <html>
+<body>
+    <div class="pull-right">
+        <a class="nav-link text-dark" asp-area="" asp-page="Tema/AllTema">
+            <button type="button" class="btn btn-success" asp-area="" asp-page="Tema/AllTema">Admin</button>
+        </a>
+    </div>
+</body>
 <head>
     <meta name="viewport" content="width=device-width" />
     <link href="~/css/site.css" rel="stylesheet" />
     <title>@ViewBag.Title</title>
 </head>
 <body class="forsidebody">
-         
-            <img src="~/images/ProductBox10.png" class="center imgforside" />
-            <a href="Brugermenu">               
-                <button type="button" class="btn btn-dark center col-lg-2 mybutton">Startmenu</button>
-            </a>
+
+    <img src="~/images/ProductBox10.png" class="center imgforside" />
+    <a href="Brugermenu">
+        <button type="button" class="btn btn-dark center col-lg-2 ">Startmenu</button>
+    </a>
 </body>
 </html>
 
