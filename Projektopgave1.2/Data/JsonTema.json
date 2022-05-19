@@ -52,21 +52,5 @@
     "Description": "Do it yourself",
     "Udstillinger": null,
     "LinkName": "DIY"
-  },
-  {
-    "Name": "Roskilde Festival Ultimate Drug Edition",
-    "Id": 4,
-    "ImageName": "smat.jfif",
-    "Description": "A week of music and beer and drugs",
-    "Udstillinger": null,
-    "LinkName": null
-  },
-  {
-    "Name": "a",
-    "Id": 5,
-    "ImageName": null,
-    "Description": "d",
-    "Udstillinger": null,
-    "LinkName": null
   }
 ]

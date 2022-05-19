@@ -53,5 +53,27 @@ namespace Projektopgave1._2.Repositories
             
             JsonFileWriter.WriteToJsonTema(temaer, JsonFileName);
         }
+
+        public void DeleteTema(Tema tema)
+        {
+            List<Tema> temaer = GetAllTema();
+
+            if (tema != null)
+            {
+                foreach (var t in temaer)
+                {
+                    if (t.Id == tema.Id)
+                    {
+                        temaer.Remove(t);
+                        break;
+                        
+                    }
+                }
+            }
+
+            JsonFileWriter.WriteToJsonTema(temaer, JsonFileName);
+        }
+
+
     }
 }
