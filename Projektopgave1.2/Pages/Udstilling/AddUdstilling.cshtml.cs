@@ -36,7 +36,7 @@ namespace Projektopgave1._2
             }
             repo.AddUdstilling(Udstilling);
             Udstillinger = repo.GetAllUdstilling();
-            return RedirectToPage("~Tema/SeTema");
+            return RedirectToPage("../Tema/AllTema");
         }
         //private ITemaRepository repo;
 
