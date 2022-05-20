@@ -26,23 +26,29 @@
                 {
                     @foreach (var item in Model.Tema.Udstillinger)
                     {
-                        <tr>
-                            <td>
-                                @item.Name
-                            </td>
-                            <td>
-                                @item.Id
-                            </td>
-                            <td>
-                                @item.Description
-                            </td>
-                            <td>
-                                @item.Duration minutter
-                            </td>
-                            <td>
-                                <img src="~/images/@item.ImageName" width="140" height="70">
-                            </td>
-                        </tr>
+                <tr>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @item.Id
+                    </td>
+                    <td>
+                        @item.Description
+                    </td>
+                    <td>
+                        @item.Duration minutter
+                    </td>
+                    <td>
+                        <img src="~/images/@item.ImageName" width="140" height="70">
+                    </td>
+                    <td>
+                        <p>
+                            <a asp-page="/Udstilling/EditUdstilling" asp-route-id="@item.Id">Edit</a> |
+                            <a asp-page="/Udstilling/DeleteUdstilling" asp-route-id="@item.Id">Delete</a> |
+                        </p>
+                    </td>
+                </tr>
                     }}
             </tbody>
         </table>
