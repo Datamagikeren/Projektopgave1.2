@@ -103,6 +103,14 @@
         "TemaKode": "Lys",
         "Duration": 0.0,
         "ImageName": null
+      },
+      {
+        "Name": "lll",
+        "Id": 4567,
+        "Description": "asdfghytredc",
+        "TemaKode": "Lys",
+        "Duration": 0.0,
+        "ImageName": null
       }
     ],
     "LinkName": "Lys"
