@@ -45,8 +45,7 @@ namespace Projektopgave1._2.Repositories
                         t.Id = tema.Id;
                         t.Name = tema.Name;
                         t.Description = tema.Description;
-                        t.ImageName = tema.ImageName;
-                        t.LinkName = tema.LinkName;                        
+                        t.ImageName = tema.ImageName;                       
                     }
                 }                
             }

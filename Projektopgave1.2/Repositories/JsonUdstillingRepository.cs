@@ -1,27 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Projektopgave1._2.Models;
-using Projektopgave1._2.Helpers;
+﻿using Projektopgave1._2.Helpers;
 using Projektopgave1._2.Interfaces;
+using Projektopgave1._2.Models;
+using System.Collections.Generic;
 
-namespace Projektopgave1._2.Repositories 
+namespace Projektopgave1._2.Repositories
 {
     public class JsonUdstillingRepository : IUdstillingRepository
     {
-        string JsonFileName = @"Data\JsonUdstilling.json";
+        private string JsonFileName = @"Data\JsonUdstilling.json";
+
         public List<Udstilling> GetAllUdstilling()
         {
             return JsonFileReader.ReadJsonUdstilling(JsonFileName);
         }
+
         public void AddUdstilling(Udstilling udstilling)
         {
             List<Udstilling> udstillinger = GetAllUdstilling();
             udstillinger.Add(udstilling);
             JsonFileWriter.WriteToJsonUdstilling(udstillinger, JsonFileName);
         }
-
 
         public Udstilling GetUdstilling(int id)
         {
@@ -32,6 +30,7 @@ namespace Projektopgave1._2.Repositories
             }
             return new Udstilling();
         }
+
         public void EditUdstilling(Udstilling udstilling)
         {
             List<Udstilling> udstillinger = GetAllUdstilling();
@@ -66,15 +65,37 @@ namespace Projektopgave1._2.Repositories
                     {
                         udstillinger.Remove(t);
                         break;
-
                     }
                 }
             }
 
             JsonFileWriter.WriteToJsonUdstilling(udstillinger, JsonFileName);
         }
+        public List<Udstilling> SearchUdstillingerByCode(Tema tema)
+        {
+            List<Udstilling> filteredList = new List<Udstilling>();
+            List<Udstilling> udstillinger = GetAllUdstilling();
+            foreach (var u in udstillinger)
+            {
+                if ( u.TemaKode == tema.Kode)
+                {
+                    filteredList.Add(u);
+                }
+            }
+            return filteredList;
+        }
+        //public List<Event> SearchEventsByCode(string code)
+        //{
+        //    List<Event> filteredList = new List<Event>();
 
-
-    
-}
+        //    foreach (var ev in GetAllEvents().ToList())
+        //    {
+        //        if (ev.CountryCode == code)
+        //        {
+        //            filteredList.Add(ev);
+        //        }
+        //    }
+        //    return filteredList;
+        //}
+    }
 }

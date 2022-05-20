@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Projektopgave1._2.Interfaces;
 using Projektopgave1._2.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Projektopgave1._2
 {
@@ -13,18 +14,21 @@ namespace Projektopgave1._2
     {
 
         private IUdstillingRepository repo;
-
-        public AddUdstillingModel(IUdstillingRepository repository)
-        {
-            repo = repository;
-        }
         public List<Udstilling> Udstillinger { get; set; }
         [BindProperty]
         public Udstilling Udstilling { get; set; }
-
-        public void OnGet()
+        public SelectList TemaKoder { get; set; }
+        public AddUdstillingModel(IUdstillingRepository repository, ITemaRepository trepo)
         {
-            Udstillinger = repo.GetAllUdstilling();
+            repo = repository;
+            List<Tema> temaer = trepo.GetAllTema();
+            TemaKoder = new SelectList(temaer, "Kode", "Name");
+        }
+
+
+        public IActionResult OnGet()
+        {
+            return Page();
         }
         public IActionResult OnPost()
         {
@@ -33,7 +37,6 @@ namespace Projektopgave1._2
                 return Page();
             }
             repo.AddUdstilling(Udstilling);
-            Udstillinger = repo.GetAllUdstilling();
             return Redirect("~/Tema/AllTema");
         }
 

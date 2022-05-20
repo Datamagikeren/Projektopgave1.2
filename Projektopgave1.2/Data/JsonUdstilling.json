@@ -4,20 +4,31 @@
     "Id": 11,
     "Description": "Life of the mud",
     "Duration": 4.3,
-    "ImageName": "vinyl.jpg"
+    "ImageName": "vinyl.jpg",
+    "TemaKode": "Ros"
   },
   {
     "Name": "The tragedy",
     "Id": 12,
     "Description": "Dolore sit sanctus est esse consectetuer hendrerit facilisi ut consectetuer elitr facilisi consetetur in kasd sea dignissim rebum dolor duis",
     "Duration": 4.3,
-    "ImageName": "lys.jpg"
+    "ImageName": "lys.jpg",
+    "TemaKode": "Ros"
   },
   {
     "Name": "Den sidste",
     "Id": 13,
     "Description": "Dolore sit sanctus est esse consectetuer hendrerit facilisi ut consectetuer elitr facilisi consetetur in kasd sea dignissim rebum dolor duis",
     "Duration": 4.3,
-    "ImageName": "Ragnarock3.jpg"
+    "ImageName": "Ragnarock3.jpg",
+    "TemaKode": "Lys"
+  },
+  {
+    "Name": "f",
+    "Id": 7,
+    "Description": "f",
+    "Duration": 1.0,
+    "ImageName": "v",
+    "TemaKode": "Lys"
   }
 ]
