@@ -3,9 +3,9 @@
 @{
 }
 <body>
- 
 
-    
+
+
     <div class="text-center">
         <h1 class="display-4">@Model.Tema.Name</h1>
         <img src="~/images/@Model.Tema.ImageName" width="500" height="250">
@@ -26,26 +26,30 @@
                 {
                     @foreach (var item in Model.Tema.Udstillinger)
                     {
-                <tr>
-                    <td>
-                        @item.Name
-                    </td>
-                    <td>
-                        @item.Id
-                    </td>
-                    <td>
-                        @item.Description
-                    </td>
-                    <td>
-                        @item.Duration minutter
-                    </td>
-                    <td>
-                        <img src="~/images/@item.ImageName" width="140" height="70">
-                    </td>
-                </tr>
-}}
+                        <tr>
+                            <td>
+                                @item.Name
+                            </td>
+                            <td>
+                                @item.Id
+                            </td>
+                            <td>
+                                @item.Description
+                            </td>
+                            <td>
+                                @item.Duration minutter
+                            </td>
+                            <td>
+                                <img src="~/images/@item.ImageName" width="140" height="70">
+                            </td>
+                        </tr>
+                    }}
             </tbody>
         </table>
     </div>
+    <a asp-page="/Udstilling/AddUdstilling"
+       class="btn btn-success btn-group-lg pull-right">
+        Create Udstilling
+    </a>
 </body>
 

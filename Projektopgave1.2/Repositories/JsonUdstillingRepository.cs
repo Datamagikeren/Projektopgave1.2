@@ -8,19 +8,19 @@ using Projektopgave1._2.Helpers;
 
 namespace Projektopgave1._2.Repositories
 {
-    public class JsonUdstillingRepository : IUdstillingRepositiry
+    public class JsonUdstillingRepository /*: IUdstillingRepositiry*/
     {
         string JsonFileName = @"Data\JsonUdstilling.json";
 
-        public List<Udstilling> GetAllUdstillinger()
-        {
-            return JsonFileReader.ReadJsonUdstilling(JsonFileName);
-        }
-        public void AddUdstilling(Udstilling udstilling)
-        {
-            List<Udstilling> udstilinger = GetAllUdstillinger();
-            udstilinger.Add(udstilling);
-            JsonFileWriter.WriteToJsonUdstilling(udstilinger, JsonFileName);
-        }
+        //public List<Udstilling> GetAllUdstilling()
+        //{
+        //    return JsonFileReader.ReadJsonUdstilling(JsonFileName);
+        //}
+        //public void AddUdstilling(Udstilling udstilling)
+        //{
+        //    List<Udstilling> udstilinger = GetAllUdstilling();
+        //    udstilinger.Add(udstilling);
+        //    JsonFileWriter.WriteToJsonUdstilling(udstilinger, JsonFileName);
+        //}
     }
 }

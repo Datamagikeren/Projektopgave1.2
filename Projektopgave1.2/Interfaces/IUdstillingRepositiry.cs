@@ -8,7 +8,7 @@ namespace Projektopgave1._2.Interfaces
 {
     public interface IUdstillingRepositiry
     {
-        public List<Udstilling> GetAllUdstillinger();
+        public List<Udstilling> GetAllUdstilling();
         public void AddUdstilling(Udstilling udstilling);
     }
 }

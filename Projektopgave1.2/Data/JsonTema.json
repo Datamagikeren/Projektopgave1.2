@@ -47,6 +47,14 @@
         "TemaKode": "Lys",
         "Duration": 4.3,
         "ImageName": "vinyl.jpg"
+      },
+      {
+        "Name": "a",
+        "Id": 21,
+        "Description": "a",
+        "TemaKode": "Lys",
+        "Duration": 0.0,
+        "ImageName": null
       }
     ],
     "LinkName": "Lys"
@@ -59,5 +67,14 @@
     "Kode": "DIY",
     "Udstillinger": null,
     "LinkName": "DIY"
+  },
+  {
+    "Name": "a",
+    "Id": 4,
+    "ImageName": "f",
+    "Description": "f",
+    "Kode": null,
+    "Udstillinger": null,
+    "LinkName": null
   }
 ]

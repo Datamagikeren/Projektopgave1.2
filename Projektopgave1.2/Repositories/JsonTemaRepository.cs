@@ -12,13 +12,13 @@ namespace Projektopgave1._2.Repositories
     {
         string JsonFileName1 = @"Data\JsonUdstilling.json";
 
-        public List<Udstilling> GetAllUdstillinger()
+        public List<Udstilling> GetAllUdstilling()
         {
             return JsonFileReader.ReadJsonUdstilling(JsonFileName1);
         }
         public void AddUdstilling(Udstilling udstilling)
         {
-            List<Udstilling> udstilinger = GetAllUdstillinger();
+            List<Udstilling> udstilinger = GetAllUdstilling();
             List<Tema> temaer = GetAllTema();
             udstilinger.Add(udstilling);
             foreach(var tema in temaer)
@@ -26,6 +26,7 @@ namespace Projektopgave1._2.Repositories
                 if (tema.Kode == udstilling.TemaKode)
                 {
                     tema.Udstillinger.Add(udstilling);
+                    JsonFileWriter.WriteToJsonTema(temaer, JsonFileName);
                 }
             }
 

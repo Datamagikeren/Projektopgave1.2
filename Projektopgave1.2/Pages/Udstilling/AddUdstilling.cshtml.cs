@@ -21,7 +21,7 @@ namespace Projektopgave1._2
         {
             repo = repository;
             List<Tema> temaer = trepo.GetAllTema();
-            TemaKoder = new SelectList(temaer, "Code", "Name");
+            TemaKoder = new SelectList(temaer, "Kode", "Name");
         }
 
         public IActionResult OnGet()
@@ -35,7 +35,7 @@ namespace Projektopgave1._2
                 return Page();
             }
             repo.AddUdstilling(Udstilling);
-            Udstillinger = repo.GetAllUdstillinger();
+            Udstillinger = repo.GetAllUdstilling();
             return RedirectToPage("~Tema/SeTema");
         }
         //private ITemaRepository repo;

@@ -3,7 +3,7 @@
     "Name": "SMAT",
     "Id": 11,
     "Description": "Life of the mud",
-    "Kode": null,
+    "TemaKode": null,
     "Duration": 4.3,
     "ImageName": "vinyl.jpg"
   },
@@ -11,7 +11,7 @@
     "Name": "The tragedy",
     "Id": 12,
     "Description": "Dolore sit sanctus est esse consectetuer hendrerit facilisi ut consectetuer elitr facilisi consetetur in kasd sea dignissim rebum dolor duis",
-    "Kode": null,
+    "TemaKode": null,
     "Duration": 4.3,
     "ImageName": "lys.jpg"
   },
@@ -19,10 +19,16 @@
     "Name": "Den sidste",
     "Id": 13,
     "Description": "Dolore sit sanctus est esse consectetuer hendrerit facilisi ut consectetuer elitr facilisi consetetur in kasd sea dignissim rebum dolor duis",
-    "Kode": null,
+    "TemaKode": null,
     "Duration": 4.3,
     "ImageName": "Ragnarock3.jpg"
+  },
+  {
+    "Name": "a",
+    "Id": 21,
+    "Description": "a",
+    "TemaKode": "Lys",
+    "Duration": 0.0,
+    "ImageName": null
   }
-
-
 ]
