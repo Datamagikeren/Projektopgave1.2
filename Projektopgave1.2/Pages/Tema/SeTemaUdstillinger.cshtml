@@ -44,9 +44,8 @@
                     @item.TemaKode
                 </td>
                 <td>
-                    <a asp-page="/Events/EditEvent" asp-route-id="@item.Id">Edit</a>|
-                    <a asp-page="/Events/DetailEvent" asp-route-id="@item.Id">Details</a> |
-                    <a asp-page="/Events/DeleteEvent" asp-route-id="@item.Id">Delete</a>
+                    
+                    <a asp-page="../Udstilling/DeleteUdstilling" asp-route-id="@item.Id">Delete</a>
                 </td>
             </tr>
         }
