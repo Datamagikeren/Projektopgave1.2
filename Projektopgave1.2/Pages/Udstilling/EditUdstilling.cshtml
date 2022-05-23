@@ -4,9 +4,10 @@
 }
 <h3>Edit Udstilling</h3>
 
-
+<p>ID @Model.Udstilling.Id</p>
 <form method="post">
-
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="@Model.Udstilling.Id" />
     <div class="form-group">
         <label asp-for="@Model.Udstilling.Name" class="control-label"></label>
         <input asp-for="@Model.Udstilling.Name" class="form-control" />

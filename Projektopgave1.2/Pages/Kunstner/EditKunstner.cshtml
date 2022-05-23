@@ -4,9 +4,10 @@
 }
 <h3>Edit Kunstner</h3>
 
-
+<p>ID @Model.Kunstner.Id</p>
 <form method="post">
-
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="@Model.Kunstner.Id" />
     <div class="form-group">
         <label asp-for="@Model.Kunstner.Name" class="control-label"></label>
         <input asp-for="@Model.Kunstner.Name" class="form-control" />
