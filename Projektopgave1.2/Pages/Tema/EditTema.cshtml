@@ -4,13 +4,10 @@
 }
 <h3>Edit Tema</h3>
 
-
+<p>ID @Model.Tema.Id</p>
 <form method="post">
-    <div class="form-group">
-        <label asp-for="@Model.Tema.Id" class="control-label"></label>
-        <input asp-for="@Model.Tema.Id" class="form-control" />
-        <span asp-validation-for="@Model.Tema.Id" class="text-danger"></span>
-    </div>
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="@Model.Tema.Id" />
     <div class="form-group">
         <label asp-for="@Model.Tema.Name" class="control-label"></label>
         <input asp-for="@Model.Tema.Name" class="form-control" />
