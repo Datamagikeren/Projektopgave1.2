@@ -26,11 +26,7 @@
         <input asp-for="@Model.Tema.ImageName" class="form-control" />
         <span asp-validation-for="@Model.Tema.ImageName" class="text-danger"></span>
     </div>
-    <div class="form-group">
-        <label asp-for="@Model.Tema.LinkName" class="control-label"></label>
-        <input hidden="hidden" asp-for="@Model.Tema.LinkName" class="form-control" />
-        <span asp-validation-for="@Model.Tema.LinkName" class="text-danger"></span>
-    </div>
+
     <div class="form-group">
         <input type="submit" value="Save" class="btn btn-primary" />
     </div>

@@ -3,59 +3,19 @@
 @{
 }
 <body>
+ 
 
-
-
+    
     <div class="text-center">
         <h1 class="display-4">@Model.Tema.Name</h1>
         <img src="~/images/@Model.Tema.ImageName" width="500" height="250">
         <p>@Model.Tema.Description</p>
 
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Name </th>
-                    <th>Id</th>
-                    <th>Description</th>
-                    <th>Duration</th>
-                    <th>Image</th>
-                </tr>
-            </thead>
-            <tbody>
-                @if (Model.Tema.Udstillinger != null)
-                {
-                    @foreach (var item in Model.Tema.Udstillinger)
-                    {
-                <tr>
-                    <td>
-                        @item.Name
-                    </td>
-                    <td>
-                        @item.Id
-                    </td>
-                    <td>
-                        @item.Description
-                    </td>
-                    <td>
-                        @item.Duration minutter
-                    </td>
-                    <td>
-                        <img src="~/images/@item.ImageName" width="140" height="70">
-                    </td>
-                    <td>
-                        <p>
-                            <a asp-page="/Udstilling/EditUdstilling" asp-route-id="@item.Id">Edit</a> |
-                            <a asp-page="/Udstilling/DeleteUdstilling" asp-route-id="@item.Id">Delete</a> |
-                        </p>
-                    </td>
-                </tr>
-                    }}
-            </tbody>
-        </table>
+        
+        <a asp-page="/Udstilling/AddUdstilling"
+           class="btn btn-success btn-group-lg pull-right">
+            Create Udstilling
+        </a>
     </div>
-    <a asp-page="/Udstilling/AddUdstilling"
-       class="btn btn-success btn-group-lg pull-right">
-        Create Udstilling
-    </a>
 </body>
 
