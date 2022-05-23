@@ -37,14 +37,20 @@
                             <a asp-page="DeleteTema" asp-route-id="@item.Id">Delete</a> |
                             <a asp-page="SeTema" asp-route-id="@item.Id"> Se Tema</a>  |
                             <a asp-page="SeTemaUdstillinger" asp-route-id="@item.Id"> Se Temas Udstilling</a>
-                            
+
                         </p>
                     </td>
                 </tr>
-}}
+            }}
     </tbody>
 </table>
 <a asp-page="AddTema"
-   class="btn btn-success btn-group-lg pull-right">
+   class="text-dark btn btn-success col-auto pull-left">
     Create event
+</a>
+<a class="nav-link btn-outline-dark"></a>
+<a class="nav-link btn-outline-dark"></a>
+<a asp-page="~/Kunstner/SeKunstner"
+   class="text-dark btn btn-warning col-auto pull-right">
+    Se kunstnere
 </a>
