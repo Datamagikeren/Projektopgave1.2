@@ -12,12 +12,12 @@ namespace Projektopgave1._2
 {
     public class DeleteUdstillingModel : PageModel
     {
-        private IUdstillingRepositiry repo;
+        private IUdstillingRepository repo;
         public List<Udstilling> Udstillinger { get; set; }
         [BindProperty]
         public Udstilling Udstilling { get; set; }
         //public SelectList TemaKoder { get; set; }
-        public DeleteUdstillingModel(IUdstillingRepositiry repository, ITemaRepository trepo)
+        public DeleteUdstillingModel(IUdstillingRepository repository, ITemaRepository trepo)
         {
             repo = repository;
             List<Tema> temaer = trepo.GetAllTema();
