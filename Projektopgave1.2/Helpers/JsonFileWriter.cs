@@ -11,9 +11,9 @@ namespace Projektopgave1._2.Helpers
     public class JsonFileWriter
     {
        
-        public static void WriteToJsonTema(List<Tema> books, string JsonFileName)
+        public static void WriteToJsonTema(List<Tema> temaer, string JsonFileName)
         {
-            string output = Newtonsoft.Json.JsonConvert.SerializeObject(books, Newtonsoft.Json.Formatting.Indented);
+            string output = Newtonsoft.Json.JsonConvert.SerializeObject(temaer, Newtonsoft.Json.Formatting.Indented);
             File.WriteAllText(JsonFileName, output);
         }
 
@@ -22,6 +22,11 @@ namespace Projektopgave1._2.Helpers
             string output = Newtonsoft.Json.JsonConvert.SerializeObject(orders, Newtonsoft.Json.Formatting.Indented);
             File.WriteAllText(JsonFileName, output);
         }
-        
+        public static void WriteToJsonKunstner(List<Kunstner> kunstnere, string JsonFileName)
+        {
+            string output = Newtonsoft.Json.JsonConvert.SerializeObject(kunstnere, Newtonsoft.Json.Formatting.Indented);
+            File.WriteAllText(JsonFileName, output);
+        }
+
     }
 }

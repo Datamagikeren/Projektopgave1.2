@@ -29,7 +29,7 @@ namespace Projektopgave1._2
             services.AddRazorPages();
             services.AddTransient<ITemaRepository, JsonTemaRepository>();
             services.AddTransient<IUdstillingRepository, JsonUdstillingRepository>();
-
+            services.AddTransient<IKunstnerRepository, JsonKunstnerRepository>();
 
         }
 

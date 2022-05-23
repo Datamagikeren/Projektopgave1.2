@@ -23,5 +23,12 @@ namespace Projektopgave1._2.Helpers
 
             return JsonSerializer.Deserialize<List<Udstilling>>(jsonString);
         }
+
+        public static List<Kunstner> ReadJsonKunstner(string JsonFileName)
+        {
+            string jsonString = File.ReadAllText(JsonFileName);
+
+            return JsonSerializer.Deserialize<List<Kunstner>>(jsonString);
+        }
     }
 }
