@@ -29,7 +29,7 @@
     justify-content: center;
 }
 .track-art{
-    margin: 25px;
+    margin: 17px;
     height: 250px;
     width: 250px;
     border: 2px solid #fff;
@@ -132,18 +132,23 @@
     <div class="player-body">
         <div class="player">
             <div class="wrapper">
+                <button type="button" class="btn btn-secondary btn-xxs" data-toggle="modal" data-target="#exampleModalLong">Læs Med</button>
+
+                @*<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        Launch demo modal
+                    </button>*@
                 <div class="details">
                     <div><img src="~/images/@Html.DisplayFor(model => model.Udstilling.ImageName) " class="track-art"></div>
                     <div class="track-name">@Html.DisplayFor(model => model.Udstilling.Name)</div>
                 </div>
 
                 <div class="slider_container">
-                    <div class="current-time">00:00</div>
-                    <input type="range"  class="seek_slider">
-                    <div class="total-duration">05:32</div>
+                    <div class="current-time">05:32</div>
+                    <input type="range" class="seek_slider">
+                    <div class="total-duration">00:00</div>
                 </div>
 
-            
+
                 <div id="music-container">
                     <div class="navigation">
                         <button id="prev" class="action-btn">
@@ -163,11 +168,52 @@
                         </button>
                     </div>
                 </div>
-               
+
             </div>
         </div>
     </div>
-   
+
+    <!-- Modal ikke scroll-->
+    @*<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">@Html.DisplayFor(model => model.Udstilling.Name)</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        @Html.DisplayFor(model => model.Udstilling.Description)
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Luk</button>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    @Html.DisplayFor(model => model.Udstilling.Description)
+Iusto te et eirmod aliquyam diam ea dolor elit accusam nonumy delenit diam accusam et stet vero justo tation est tation dolor augue assum voluptua et nihil vulputate ut no voluptua sed velit elit diam erat et dolor elit rebum at lorem vero sadipscing ipsum dolor voluptua ex vel sit suscipit dolor consetetur sit minim est stet autem feugiat invidunt commodo clita ipsum diam sit gubergren sed et sadipscing est duis in vero clita eros eros consetetur liber illum feugiat consetetur ipsum elitr nonumy ut erat duo magna justo facer dolores hendrerit nonumy amet labore praesent dignissim dolores feugiat sadipscing justo in ullamcorper in eirmod dolore accumsan illum iriure sit kasd et gubergren ea elitr sit justo no velit dolores
+Sadipscing ipsum ipsum et tempor sea magna clita sit at sed doming diam in clita duo te duo sit diam aliquyam est magna sit aliquyam vero at vero ipsum et sed amet sed dolore sit consequat rebum labore odio magna magna clita invidunt luptatum dolor et velit eirmod ipsum in sed ut sea diam erat ut accusam dolor elitr stet dolor dolor nonummy clita sed aliquyam dolore facilisis lorem et et nibh eum accusam sanctus facilisis et dolore vulputate ipsum takimata at accusam dolore sadipscing rebum tempor nostrud ipsum no euismod dolores voluptua in ea labore lorem in eirmod nulla et gubergren adipiscing in accusam duo eos ipsum magna dignissim clita sanctus at consetetur vulputate et feugait ea clita rebum consetetur elitr eos gubergren vel laoreet zzril lorem eirmod lorem eos at erat at ea dolor consetetur erat lorem elitr diam ea erat dolore consetetur sanctus sed magna justo nulla tincidunt eirmod est sed erat at tempor accusam sanctus duo blandit et eirmod dolore commodo placerat sed option commodo kasd sed aliquyam sadipscing nulla eos sea erat vero et rebum nulla dolore labore in et blandit sed est nonumy possim gubergren et vero takimata sadipscing accusam ut et lorem accusam
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         const musicContainer = document.getElementById('music-container');
         const playBtn = document.getElementById('play');
@@ -194,5 +240,5 @@
             }
         });
     </script>
-   
+
 </body>
