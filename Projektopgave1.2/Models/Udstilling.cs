@@ -15,6 +15,6 @@ namespace Projektopgave1._2.Models
 
         public string ImageName { get; set; }
 
-        public string TemaKode { get; set; }
+        
     }
 }
