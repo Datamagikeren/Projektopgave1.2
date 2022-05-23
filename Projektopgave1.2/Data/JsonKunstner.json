@@ -2,19 +2,19 @@
   {
     "Name": "Lasse",
     "Id": 1,
-    "Description": "LasseBOi",
+    "Description": "Lasse....",
     "ImageName": "lasse.jpg"
-  },
-  {
-    "Name": "Smat",
-    "Id": 2,
-    "Description": "Smatsmat",
-    "ImageName": "smat.jfif"
   },
   {
     "Name": "Lys",
     "Id": 3,
     "Description": "Lyss",
     "ImageName": "lys.jpg"
+  },
+  {
+    "Name": "hej",
+    "Id": 7,
+    "Description": "wwww",
+    "ImageName": "smat.jfif"
   }
 ]
