@@ -1,0 +1,29 @@
+﻿@page
+@model Projektopgave1._2.EditKunstnerModel
+@{
+}
+<h3>Edit Kunstner</h3>
+
+
+<form method="post">
+
+    <div class="form-group">
+        <label asp-for="@Model.Kunstner.Name" class="control-label"></label>
+        <input asp-for="@Model.Kunstner.Name" class="form-control" />
+        <span asp-validation-for="@Model.Kunstner.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Kunstner.Description" class="control-label"></label>
+        <input asp-for="@Model.Kunstner.Description" class="form-control" />
+        <span asp-validation-for="@Model.Kunstner.Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Kunstner.ImageName" class="control-label"></label>
+        <input asp-for="@Model.Kunstner.ImageName" class="form-control" />
+        <span asp-validation-for="@Model.Kunstner.ImageName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+</form>
