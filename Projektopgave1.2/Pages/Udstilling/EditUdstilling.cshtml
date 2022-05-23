@@ -1,0 +1,29 @@
+﻿@page
+@model Projektopgave1._2.EditUdstillingModel
+@{
+}
+<h3>Edit Udstilling</h3>
+
+
+<form method="post">
+
+    <div class="form-group">
+        <label asp-for="@Model.Udstilling.Name" class="control-label"></label>
+        <input asp-for="@Model.Udstilling.Name" class="form-control" />
+        <span asp-validation-for="@Model.Udstilling.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Udstilling.Description" class="control-label"></label>
+        <input asp-for="@Model.Udstilling.Description" class="form-control" />
+        <span asp-validation-for="@Model.Udstilling.Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Udstilling.ImageName" class="control-label"></label>
+        <input asp-for="@Model.Udstilling.ImageName" class="form-control" />
+        <span asp-validation-for="@Model.Udstilling.ImageName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+</form>
