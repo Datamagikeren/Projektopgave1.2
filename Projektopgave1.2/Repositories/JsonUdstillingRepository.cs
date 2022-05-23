@@ -84,18 +84,6 @@ namespace Projektopgave1._2.Repositories
             }
             return filteredList;
         }
-        //public List<Event> SearchEventsByCode(string code)
-        //{
-        //    List<Event> filteredList = new List<Event>();
 
-        //    foreach (var ev in GetAllEvents().ToList())
-        //    {
-        //        if (ev.CountryCode == code)
-        //        {
-        //            filteredList.Add(ev);
-        //        }
-        //    }
-        //    return filteredList;
-        //}
     }
 }
