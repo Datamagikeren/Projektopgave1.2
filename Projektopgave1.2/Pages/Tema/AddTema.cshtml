@@ -44,8 +44,15 @@
             <span asp-validation-for="@Model.Tema.ImageName" class="text-danger"></span>
         </div>
     </div>
+    <div style="width:25%" class="form-group">
+        <label asp-for="@Model.Tema.Kode" class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="@Model.Tema.Kode" type="text" class="form-control">
+            <span asp-validation-for="@Model.Tema.Kode" class="text-danger"></span>
+        </div>
+    </div>
 
-    
+
 
 
     <div class="form-group">
