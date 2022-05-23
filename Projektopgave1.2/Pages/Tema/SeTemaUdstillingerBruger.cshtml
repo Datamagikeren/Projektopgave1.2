@@ -1,0 +1,27 @@
+﻿@page
+@model Projektopgave1._2.SeTemaUdstillingerBrugerModel
+@{
+}
+<div class="containerBruger">
+    <div class="row">
+
+        @foreach (var item in Model.Udstillinger)
+        {
+
+            <div class="column-2 p-2">
+                <div class="card bg-dark text-white">
+
+                    <img src="~/images/@item.ImageName" width="500" height="250" alt="Card image">
+                    
+
+
+
+                    <p class="centeredTitle"><strong>@item.Name</strong></p>
+                    <p class="centeredDesrib"><em>@item.Description</em></p>
+
+                </div>
+            </div>
+        }
+    </div>
+
+</div>
