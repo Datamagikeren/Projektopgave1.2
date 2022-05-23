@@ -12,11 +12,11 @@
 
             <div class="column-2 p-2">
                 <div class="card bg-dark text-white">
-                 
-                        <img src="~/images/@item.ImageName" width="500" height="250" alt="Card image">
-                    <p><a asp-page="Tema/SeTemaUdstillingerBruger" asp-route-id="@item.Id"> Se Temas Udstilling</a></p>
-                        
+
                     
+                    <a asp-page="SeTemaUdstillingerBruger" asp-route-id="@item.Id"> <img src="~/images/@item.ImageName" width="500" height="250" alt="Card image"></a>
+
+
 
                     <p class="centeredTitle"><strong>@item.Name</strong></p>
                     <p class="centeredDesrib"><em>@item.Description</em></p>
@@ -24,6 +24,21 @@
                 </div>
             </div>
         }
+    <div class="column-2 p-2">
+        <div class="card bg-dark text-white">
+
+
+            <a asp-page="BrugerKunstner"> <img src="~/images/lasse.jpg" width="500" height="250" alt="Card image"></a>
+
+
+
+            <p class="centeredTitle"><strong>Kunstnere</strong></p>
+            <p class="centeredDesrib"><em>Se kunstnere her</em></p>
+
+        </div>
+    </div>
+        
+
     </div>
 
 </div>

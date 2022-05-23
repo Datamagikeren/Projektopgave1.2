@@ -14,7 +14,7 @@ namespace Projektopgave1._2
         [BindProperty]
         public Kunstner Kunstner { get; set; }
         private IKunstnerRepository repo;
-        public List<Kunstner> Kunstnerer { get; set; }
+        public List<Kunstner> Kunstnere { get; set; }
         public DeleteKunstnerModel(IKunstnerRepository repository)
         {
             repo = repository;
@@ -33,7 +33,7 @@ namespace Projektopgave1._2
                 return Page();
             }
             repo.DeleteKunstner(Kunstner);
-            Kunstnerer = repo.GetAllKunstner();
+            Kunstnere = repo.GetAllKunstner();
             return RedirectToPage("AllKunstner");
         }
     }

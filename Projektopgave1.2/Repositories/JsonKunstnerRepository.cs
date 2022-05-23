@@ -17,9 +17,9 @@ namespace Projektopgave1._2.Repositories
         }
         public void AddKunstner(Kunstner Kunstner)
         {
-            List<Kunstner> Kunstnerer = GetAllKunstner();
-            Kunstnerer.Add(Kunstner);
-            JsonFileWriter.WriteToJsonKunstner(Kunstnerer, JsonFileName);
+            List<Kunstner> Kunstnere = GetAllKunstner();
+            Kunstnere.Add(Kunstner);
+            JsonFileWriter.WriteToJsonKunstner(Kunstnere, JsonFileName);
         }
         public void EditKunstner(Kunstner Kunstner)
         {
@@ -42,19 +42,19 @@ namespace Projektopgave1._2.Repositories
         }
         public void DeleteKunstner(Kunstner Kunstner)
         {
-            List<Kunstner> Kunstnerer = GetAllKunstner();
+            List<Kunstner> Kunstnere = GetAllKunstner();
             if (Kunstner != null)
             {
-                foreach (var t in Kunstnerer)
+                foreach (var t in Kunstnere)
                 {
                     if (t.Id == Kunstner.Id)
                     {
-                        Kunstnerer.Remove(t);
+                        Kunstnere.Remove(t);
                         break;
                     }
                 }
             }
-            JsonFileWriter.WriteToJsonKunstner(Kunstnerer, JsonFileName);
+            JsonFileWriter.WriteToJsonKunstner(Kunstnere, JsonFileName);
 
         }
         public Kunstner GetKunstner(int id)

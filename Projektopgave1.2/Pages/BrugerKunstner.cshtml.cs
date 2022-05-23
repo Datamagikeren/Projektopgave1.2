@@ -9,10 +9,10 @@ using Projektopgave1._2.Interfaces;
 
 namespace Projektopgave1._2
 {
-    public class AllKunstnerModel : PageModel
+    public class BrugerKunstnerModel : PageModel
     {
         private IKunstnerRepository repo;
-        public AllKunstnerModel(IKunstnerRepository repository)
+        public BrugerKunstnerModel(IKunstnerRepository repository)
         {
             repo = repository;
         }

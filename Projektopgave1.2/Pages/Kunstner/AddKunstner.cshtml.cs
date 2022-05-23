@@ -17,13 +17,13 @@ namespace Projektopgave1._2
         {
             repo = repository;
         }
-        public List<Kunstner> Kunstnerer { get; set; }
+        public List<Kunstner> Kunstnere { get; set; }
         [BindProperty]
         public Kunstner Kunstner { get; set; }
 
         public void OnGet()
         {
-            Kunstnerer = repo.GetAllKunstner();
+            Kunstnere = repo.GetAllKunstner();
         }
         public IActionResult OnPost()
         {
@@ -32,7 +32,7 @@ namespace Projektopgave1._2
                 return Page();
             }
             repo.AddKunstner(Kunstner);
-            Kunstnerer = repo.GetAllKunstner();
+            Kunstnere = repo.GetAllKunstner();
             return RedirectToPage("AllKunstner");
         }
     }

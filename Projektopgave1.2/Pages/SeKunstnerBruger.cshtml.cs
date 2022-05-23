@@ -9,15 +9,14 @@ using Projektopgave1._2.Models;
 
 namespace Projektopgave1._2
 {
-    public class EditKunstnerModel : PageModel
+    public class SeKunstnerBrugerModel : PageModel
     {
-        private IKunstnerRepository repo;
-        public List<Kunstner> Kunstnere { get; set; }
-
+       
         [BindProperty]
         public Kunstner Kunstner { get; set; }
-
-        public EditKunstnerModel(IKunstnerRepository repository)
+        private IKunstnerRepository repo;
+        public List<Kunstner> Kunstnere { get; set; }
+        public SeKunstnerBrugerModel(IKunstnerRepository repository)
         {
             repo = repository;
         }
@@ -28,16 +27,6 @@ namespace Projektopgave1._2
             Kunstner = repo.GetKunstner(id);
             return Page();
         }
-
-        public IActionResult OnPost()
-        {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
-            repo.EditKunstner(Kunstner);
-            Kunstnere = repo.GetAllKunstner();
-            return RedirectToPage("AllKunstner");
-        }
+       
     }
 }

@@ -1,8 +1,20 @@
 [
   {
-    "Name": "fjj",
-    "Id": 76,
-    "Description": "gjj",
-    "ImageName": "jjjj"
+    "Name": "Lasse",
+    "Id": 1,
+    "Description": "LasseBOi",
+    "ImageName": "lasse.jpg"
+  },
+  {
+    "Name": "Smat",
+    "Id": 2,
+    "Description": "Smatsmat",
+    "ImageName": "smat.jfif"
+  },
+  {
+    "Name": "Lys",
+    "Id": 3,
+    "Description": "Lyss",
+    "ImageName": "lys.jpg"
   }
 ]
