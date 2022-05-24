@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "Name": "Smat",
+    "Id": 1,
+    "Description": "Smatten er meget mere end mudder og søer af pis. Inden for hegnet findes en beskidt men kærlig verden, som i 50 år har givet rum til at forløse unges drømme om den ultimative frihed og fest. Verden inden for hegnet har meget få regler. Et frirum med plads, nye fællesskaber. Smatten har altid givet plads til at være den, man har lyst til at være. Plads til at sætte fornuften på standby. Plads til hippier, goths, indie typerne, dem fra efterskolen. Inden for hegnet er festen konge. Søvn, mad, ro og renlighed bliver ligegyldigt når man har dåseøl og dunkende danserytmer. Men smatten kan også slå hårdt når alt fra rockere til dum stive drengerøve viser, at festens frirum aldrig er græneløst.",
+    "TemaKode": "Ros",
+    "Duration": 0.0,
+    "ImageName": "smat.jpg"
+  },
+  {
+    "Name": "The Tradegy",
+    "Id": 2,
+    "Description": "Da Pearl Jam spillede på Roskilde Festival i 2000, endte det i en tragedie, hvor mennesker blev mast ihjel foran Orange scene. Tragedien medførte offentlig debat om ansvaret,hvor såvel festivalen som Pearl Jam blev anklaget for at have medvirket til ulykken. Det blev senere afgjort og understreget, at Pearl Jam ikke kunne holdes ansvarlige for ulykken, mens festivalen siden har truffet en række sikkerhedsforanstaltninger for at sikre, at ulykken ikke gentages. Tragedien påvirkede bandmedlemmerne dybt og truede selve bandets eksistens, men de besluttede sig siden for at fortsætte.",
+    "TemaKode": "Ros",
+    "Duration": 0.0,
+    "ImageName": "pearljam.jpg"
+  },
+  {
+    "Name": "Frivillig",
+    "Id": 3,
+    "Description": "Saetter fokus på de 30.000 frivilliige, der hvert år skaber festivalen. Her undersøger udstillingen, hvordan festivalens non-profit tilgang og brug af frivilige kræfter som det bærende element har påvirket festivalens dna og udvikling. Undervejs møder man de lokale foreninger, der er helt afhængige af festivalen; man møder nøglepersoner, der har dedikeret det meste af deres fritid på at skabe årets festivalbrag - og så er det her, man finder Mor Toves originale æbleskivepande.",
+    "TemaKode": "Ros",
+    "Duration": 0.0,
+    "ImageName": "frivilig.jpg"
+  },
+  {
+    "Name": "Alien & Ko",
+    "Id": 4,
+    "Description": "Det startede i 1999. Dengang var der hverken mobiltelefoner og da slet ikke smartphones. Det kunne derfor nogle gange være en udfordring at finde sine venner, hvis man blev væk fra hinanden. Den opstod oprindeligt som en praktisk måde til at finde hinanden på, når man er til koncert uden mobiltelefoner, som det var dengang. Derfor blev alien-boller-ko-fanen til. Et let genkendeligt toppunkt vejrende, hoppende, bollende, som alle og enhver nem kan spotte. I dag pryder Alien & Ko både festivalplakaten og armbåndet. Den har været på Roskildes t-shirts. Og Tuborg har også haft maskotten på festivaløldåsen. Det er efterhånden sikkert at konkludere, at Alien & Ko har udviklet sig til en prominent festivalmaskot.",
+    "TemaKode": "Ros",
+    "Duration": 0.0,
+    "ImageName": "Alien&Ko.jpg"
+  }
+]
