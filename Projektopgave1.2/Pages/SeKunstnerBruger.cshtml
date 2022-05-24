@@ -5,8 +5,12 @@
 <h1>Se Kunstner</h1>
 
 <dd>
+    <div>
+        <img src="~/images/@Html.DisplayFor(model => model.Kunstner.ImageName) " class="track-art center">
+    </div>
     <form method="post">
         <dl class="row">
+
 
             <dt class="col-sm-2">
                 @Html.DisplayNameFor(model => model.Kunstner.Name)
@@ -22,9 +26,9 @@
             </dd>
 
         </dl>
-        
+
     </form>
     <div>
         <a asp-page="BrugerKunstner">Back to List</a>
     </div>
-</div>
+    </div>
