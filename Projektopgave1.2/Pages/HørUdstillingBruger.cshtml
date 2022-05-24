@@ -2,47 +2,57 @@
 @model Projektopgave1._2.HørUdstillingBrugerModel
 @{
 }
+
+@*//container, progressbar, image og små ting
+    Programming with Lam
+    https://github.com/kaizhelam/Music-Player
+
+    //kanpper og javascript:
+    https://github.com/bradtraversy/vanillawebprojects/tree/master/music-player*@
 <style>
-.player-body{
-    font-family: Arial, Helvetica, sans-serif;
-    color: whitesmoke;
-    margin: -1%;
-    
-}
-.player{
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-}
-.wrapper{
-    border: 1px solid transparent;
-    padding: 10px;
-    border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-}
-.details{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-}
-.track-art{
-    margin: 17px;
-    height: 250px;
-    width: 250px;
-    border: 2px solid #fff;
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
-    -moz-box-shadow: 0px 6px 5px #ccc;
-    -webkit-box-shadow:0px 6px 5px #ccc;
-    box-shadow: 0px 6px 5px #ccc;
-    -moz-border-radius:190px;
+    .player-body {
+        font-family: Arial, Helvetica, sans-serif;
+        color: whitesmoke;
+        margin: -1%;
+    }
+
+    .player {
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .wrapper {
+        border: 1px solid transparent;
+        padding: 10px;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    }
+
+    .details {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .track-art {
+        margin: 17px;
+        height: 250px;
+        width: 250px;
+        border: 2px solid #fff;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        -moz-box-shadow: 0px 6px 5px #ccc;
+        -webkit-box-shadow: 0px 6px 5px #ccc;
+        box-shadow: 0px 6px 5px #ccc;
+        /* -moz-border-radius:190px;
     -webkit-border-radius:190px;
-    border-radius: 190px;
-}
+    border-radius: 190px;*/
+    }
 
     .track-name {
         font-size: 2.5rem;
@@ -52,35 +62,39 @@
 
 
 
-.slider_container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.seek_slider {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    height: 5px;
-    background: #83a9ff;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-}
-.seek_slider::-webkit-slider-thumb{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: 15px;
-    height: 15px;
-    background: white;
-    border: 3px solid #3774ff;
-    cursor: pointer;
-    border-radius: 100%;
-}
-.seek_slider:hover{
-    opacity: 1.0;
-}
-.seek_slider{
-    width: 60%;
-}
+    .slider_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .seek_slider {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        height: 5px;
+        background: #83a9ff;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+
+        .seek_slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 15px;
+            height: 15px;
+            background: white;
+            border: 3px solid #3774ff;
+            cursor: pointer;
+            border-radius: 100%;
+        }
+
+        .seek_slider:hover {
+            opacity: 1.0;
+        }
+
+    .seek_slider {
+        width: 60%;
+    }
 
     .current-time,
     .total-duration {
@@ -107,14 +121,14 @@
         margin: 0 20px;
     }
 
-    .action-btn.action-btn-big {
-        color: #cdc2d0;
-        font-size: 30px;
-    }
+        .action-btn.action-btn-big {
+            color: #cdc2d0;
+            font-size: 30px;
+        }
 
-    .action-btn:focus {
-        outline: 0;
-    }
+        .action-btn:focus {
+            outline: 0;
+        }
 </style>
 
 <head>
@@ -133,19 +147,15 @@
         <div class="player">
             <div class="wrapper">
                 <button type="button" class="btn btn-secondary btn-xxs" data-toggle="modal" data-target="#exampleModalLong">Læs Med</button>
-
-                @*<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                        Launch demo modal
-                    </button>*@
                 <div class="details">
                     <div><img src="~/images/@Html.DisplayFor(model => model.Udstilling.ImageName) " class="track-art"></div>
                     <div class="track-name">@Html.DisplayFor(model => model.Udstilling.Name)</div>
                 </div>
 
                 <div class="slider_container">
-                    <div class="current-time">05:32</div>
+                    <div class="current-time">00:00</div>
                     <input type="range" class="seek_slider">
-                    <div class="total-duration">00:00</div>
+                    <div class="total-duration">@Html.DisplayFor(model => model.Udstilling.Duration)</div>
                 </div>
 
 
@@ -205,8 +215,8 @@
                 </div>
                 <div class="modal-body">
                     @Html.DisplayFor(model => model.Udstilling.Description)
-Iusto te et eirmod aliquyam diam ea dolor elit accusam nonumy delenit diam accusam et stet vero justo tation est tation dolor augue assum voluptua et nihil vulputate ut no voluptua sed velit elit diam erat et dolor elit rebum at lorem vero sadipscing ipsum dolor voluptua ex vel sit suscipit dolor consetetur sit minim est stet autem feugiat invidunt commodo clita ipsum diam sit gubergren sed et sadipscing est duis in vero clita eros eros consetetur liber illum feugiat consetetur ipsum elitr nonumy ut erat duo magna justo facer dolores hendrerit nonumy amet labore praesent dignissim dolores feugiat sadipscing justo in ullamcorper in eirmod dolore accumsan illum iriure sit kasd et gubergren ea elitr sit justo no velit dolores
-Sadipscing ipsum ipsum et tempor sea magna clita sit at sed doming diam in clita duo te duo sit diam aliquyam est magna sit aliquyam vero at vero ipsum et sed amet sed dolore sit consequat rebum labore odio magna magna clita invidunt luptatum dolor et velit eirmod ipsum in sed ut sea diam erat ut accusam dolor elitr stet dolor dolor nonummy clita sed aliquyam dolore facilisis lorem et et nibh eum accusam sanctus facilisis et dolore vulputate ipsum takimata at accusam dolore sadipscing rebum tempor nostrud ipsum no euismod dolores voluptua in ea labore lorem in eirmod nulla et gubergren adipiscing in accusam duo eos ipsum magna dignissim clita sanctus at consetetur vulputate et feugait ea clita rebum consetetur elitr eos gubergren vel laoreet zzril lorem eirmod lorem eos at erat at ea dolor consetetur erat lorem elitr diam ea erat dolore consetetur sanctus sed magna justo nulla tincidunt eirmod est sed erat at tempor accusam sanctus duo blandit et eirmod dolore commodo placerat sed option commodo kasd sed aliquyam sadipscing nulla eos sea erat vero et rebum nulla dolore labore in et blandit sed est nonumy possim gubergren et vero takimata sadipscing accusam ut et lorem accusam
+                    Iusto te et eirmod aliquyam diam ea dolor elit accusam nonumy delenit diam accusam et stet vero justo tation est tation dolor augue assum voluptua et nihil vulputate ut no voluptua sed velit elit diam erat et dolor elit rebum at lorem vero sadipscing ipsum dolor voluptua ex vel sit suscipit dolor consetetur sit minim est stet autem feugiat invidunt commodo clita ipsum diam sit gubergren sed et sadipscing est duis in vero clita eros eros consetetur liber illum feugiat consetetur ipsum elitr nonumy ut erat duo magna justo facer dolores hendrerit nonumy amet labore praesent dignissim dolores feugiat sadipscing justo in ullamcorper in eirmod dolore accumsan illum iriure sit kasd et gubergren ea elitr sit justo no velit dolores
+                    Sadipscing ipsum ipsum et tempor sea magna clita sit at sed doming diam in clita duo te duo sit diam aliquyam est magna sit aliquyam vero at vero ipsum et sed amet sed dolore sit consequat rebum labore odio magna magna clita invidunt luptatum dolor et velit eirmod ipsum in sed ut sea diam erat ut accusam dolor elitr stet dolor dolor nonummy clita sed aliquyam dolore facilisis lorem et et nibh eum accusam sanctus facilisis et dolore vulputate ipsum takimata at accusam dolore sadipscing rebum tempor nostrud ipsum no euismod dolores voluptua in ea labore lorem in eirmod nulla et gubergren adipiscing in accusam duo eos ipsum magna dignissim clita sanctus at consetetur vulputate et feugait ea clita rebum consetetur elitr eos gubergren vel laoreet zzril lorem eirmod lorem eos at erat at ea dolor consetetur erat lorem elitr diam ea erat dolore consetetur sanctus sed magna justo nulla tincidunt eirmod est sed erat at tempor accusam sanctus duo blandit et eirmod dolore commodo placerat sed option commodo kasd sed aliquyam sadipscing nulla eos sea erat vero et rebum nulla dolore labore in et blandit sed est nonumy possim gubergren et vero takimata sadipscing accusam ut et lorem accusam
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
