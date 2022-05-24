@@ -1,9 +1,16 @@
 [
   {
-    "Name": "Lysssssss",
+    "Name": "Roskilde Festival",
+    "Id": 1,
+    "ImageName": "roskilde_stage.jfif",
+    "Description": "Masser af musik og øl",
+    "Kode": "Ros"
+  },
+  {
+    "Name": "Lys",
     "Id": 2,
-    "ImageName": "lys.jpg",
-    "Description": "The light of musickkk",
+    "ImageName": "LysTema.jpg",
+    "Description": "The light of music",
     "Kode": "Lys"
   },
   {
@@ -12,12 +19,6 @@
     "ImageName": "vinyl.jpg",
     "Description": "Do it yourself",
     "Kode": "Diy"
-  },
-  {
-    "Name": "Rosk",
-    "Id": 5,
-    "ImageName": "lasse.jpg",
-    "Description": "hej",
-    "Kode": null
   }
+
 ]
