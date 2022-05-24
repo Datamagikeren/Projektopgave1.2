@@ -16,5 +16,6 @@ namespace Projektopgave1._2.Interfaces
         public void DeleteUdstilling(Udstilling udstilling);
 
         public List<Udstilling> SearchUdstillingerByCode(Tema tema);
+        void DeleteTemasUdstillinger(Tema tema, List<Tema> temaer);
     }
 }

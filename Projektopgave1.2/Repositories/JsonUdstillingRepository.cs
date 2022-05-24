@@ -59,11 +59,11 @@ namespace Projektopgave1._2.Repositories
 
             if (udstilling != null)
             {
-                foreach (var t in udstillinger)
+                foreach (var u in udstillinger)
                 {
-                    if (t.Id == udstilling.Id)
+                    if (u.Id == udstilling.Id)
                     {
-                        udstillinger.Remove(t);
+                        udstillinger.Remove(u);
                         break;
                     }
                 }
@@ -83,6 +83,31 @@ namespace Projektopgave1._2.Repositories
                 }
             }
             return filteredList;
+        }
+        public void DeleteTemasUdstillinger(Tema tema, List<Tema> temaer)
+        {
+            List<Udstilling> udstillinger = GetAllUdstilling();
+
+           
+            if (tema != null)
+            {
+                foreach (var t in temaer)
+                {
+                    if (t.Id == tema.Id)
+                    {
+                        foreach (var udstilling in udstillinger)
+                        {
+                            if (t.Kode == udstilling.TemaKode)
+                            {
+                                DeleteUdstilling(udstilling);
+                                
+                            }
+                        }
+                    }
+                }
+            }
+            
+
         }
 
     }
