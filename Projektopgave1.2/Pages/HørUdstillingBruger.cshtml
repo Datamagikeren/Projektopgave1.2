@@ -122,13 +122,21 @@
     }
 
         .action-btn.action-btn-big {
-            color: #cdc2d0;
+            
             font-size: 30px;
         }
 
-        .action-btn:focus {
-            outline: 0;
-        }
+    .back-button {
+        margin-left: 1%;
+        position: absolute;
+        color: #dfdbdf;
+    }
+    .læs-med-btn {
+        background-color: #dfdbdf;
+        margin-left: 70%;
+        position: relative;
+    }
+
 </style>
 
 <head>
@@ -144,9 +152,12 @@
 </head>
 <body>
     <div class="player-body">
+
         <div class="player">
+
             <div class="wrapper">
-                <button type="button" class="btn btn-secondary btn-xxs" data-toggle="modal" data-target="#exampleModalLong">Læs Med</button>
+                <a href="javascript:history.back()" class="action-btn back-button" ><i class="fas fa-backward"></i></a>
+                <button type="button" class="btn læs-med-btn btn-xxs" data-toggle="modal" data-target="#exampleModalLong" style="margin-left:70%; position:relative">Læs Med</button>
                 <div class="details">
                     <div><img src="~/images/@Html.DisplayFor(model => model.Udstilling.ImageName) " class="track-art"></div>
                     <div class="track-name">@Html.DisplayFor(model => model.Udstilling.Name)</div>
@@ -161,21 +172,26 @@
 
                 <div id="music-container">
                     <div class="navigation">
-                        <button id="prev" class="action-btn">
-                            <i class="fas fa-undo"></i>
-                        </button>
-                        <button id="prev" class="action-btn">
+                        <a href="#" class="action-btn"> <i class="fas fa-undo"></i></a>
+                        <a href="#" class="action-btn"> <i class="fas fa-backward"></i></a>
+                        <a href="#" id="play" class="action-btn action-btn-big"><i class="fas fa-play"></i></a>
+                        <a href="#" class="action-btn"> <i class="fas fa-forward"></i></a>
+                        <a href="#" class="action-btn"> <i class="fas fa-redo"></i></a>
+                        @*<button id="prev" >*@
+                        <!--<a href="#" class="action-btn"> <i class="fas fa-undo"></i></a>-->
+                        @*</button>*@
+                        <!--<button id="prev" class="action-btn">
                             <i class="fas fa-backward"></i>
-                        </button>
-                        <button id="play" class="action-btn action-btn-big">
-                            <i class="fas fa-play"></i>
-                        </button>
-                        <button id="next" class="action-btn">
+                        </button>-->
+                        @*<button id="play" class="action-btn action-btn-big">*@
+                        <!--<a href="#" id="play" class="action-btn action-btn-big"><i class="fas fa-play"></i></a>-->
+                        @*</button>*@
+                        <!--<button id="next" class="action-btn">
                             <i class="fas fa-forward"></i>
                         </button>
                         <button id="prev" class="action-btn">
                             <i class="fas fa-redo"></i>
-                        </button>
+                        </button>-->
                     </div>
                 </div>
 
