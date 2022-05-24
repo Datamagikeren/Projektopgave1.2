@@ -8,21 +8,26 @@ namespace Projektopgave1._2
 {
     public class SeTemaModel : PageModel
     {
-        private ITemaRepository repo;
+        private IUdstillingRepository repo;
+        private ITemaRepository trepo;
         public List<Tema> Temaer { get; set; }
-
+        public List<Udstilling> Udstillinger { get; set; }
         [BindProperty]
         public Tema Tema { get; set; }
 
-        public SeTemaModel(ITemaRepository repository)
+        public SeTemaModel(IUdstillingRepository repository, ITemaRepository trepository)
         {
             repo = repository;
+            trepo = trepository;
         }
 
         public IActionResult OnGet(int id)
         {
+            Udstillinger = repo.GetAllUdstilling();
+            Udstillinger = new List<Udstilling>();
             Tema = new Tema();
-            Tema = repo.GetTema(id);
+            Tema = trepo.GetTema(id);
+            Udstillinger = repo.SearchUdstillingerByCode(Tema);
             return Page();
         }
     }
