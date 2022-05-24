@@ -1,20 +1,26 @@
 [
   {
-    "Name": "Lasse",
+    "Name": "Gasolin",
     "Id": 1,
-    "Description": "Lasse....",
-    "ImageName": "lasse.jpg"
+    "Description": "Gasolin' var en dansk rockgruppe, der blev dannet i 1969 og eksisterede omkring ni år frem. Gruppen bestod af Wili Jønsson, Franz Beckerlee, Bjørn Uglebjerg – senere erstattet af Søren Berlev – og med Kim Larsen som forsanger og frontfigur. Gasolin' blev 1970'ernes absolut mest populære danske rockorkester, og både plader og koncerter solgte i et hidtil uset omfang. Orkestret forsøgte flere gange at skabe et internationalt gennembrud, men succesen rakte kun til de øvrige nordiske lande, hvor de blev et ret stort hit.",
+    "ImageName": "Gasolin.jpg"
   },
   {
-    "Name": "Lys",
+    "Name": "D-A-D",
+    "Id": 2,
+    "Description": "D-A-D er en dansk rockgruppe, der blev dannet i 1982 af Jesper Binzer (vokal/rytme-guitar), Stig Pedersen (bas/back-up vokal) og Peter Lundholm Jensen (trommer) under navnet Disneyland After Dark. Debutalbummet Call Of The Wild blev sendt på gaden i 1986, men gennembruddet skete tre år senere med albummet No Fuel Left For The Pilgrims, og samme år fik gruppen en pladekontrakt med Warner i USA.",
+    "ImageName": "DAD.jpg"
+  },
+  {
+    "Name": "Suspekt",
     "Id": 3,
-    "Description": "Lyss",
-    "ImageName": "lys.jpg"
+    "Description": "Suspekt er en dansk rapgruppe, som består af de tre medlemmer Bai-D, Orgi-E, Rune Rask. Alle tre er opvokset i Albertslund. Gruppen er et af de bedst kendte navne i dansk hiphop, og har modtaget positive anmeldelser, specielt for deres albums 'Prima Nocte', 'Elektra' , 'V', '100% Jesus' og 'Sindssyge Ting'. Stilmæssigt laver Suspekt rap med en hård, kontant stil i både musik og tekster. Deres stil er blevet henvist til som horrorcore. Suspekt har optrådt på Roskilde Festival, Smukfest, Northside og Tinderbox m.fl, og gruppen har samarbejdet med artister som Kendrick Lamar, Schoolboy Q, Lukas Graham, Tina Dichow, Benal og Jooks.",
+    "ImageName": "Suspekt.jpg"
   },
   {
-    "Name": "hej",
-    "Id": 7,
-    "Description": "wwww",
-    "ImageName": "smat.jfif"
+    "Name": "Pearl Jam",
+    "Id": 4,
+    "Description": "Pearl Jam er et amerikansk grunge-band, dannet i 1990 i Seattle, Washington, USA. Gruppen består af Eddie Vedder (forsanger), Jeff Ament (bassist), Mike McCready (guitarist), Stone Gossard (guitarist (rytmeguitar)) og Matt Cameron (trommeslager, siden 1998). Gruppen opstod samtidig med Nirvana, Soundgarden, Dave Matthews Band og Alice In Chains og grundlagde hardrock-stilen (Grunge) i de tidlige 1990'ere. Gruppen har i alt haft 5 trommeslagere (deriblandt Dave Abbruzzese), de øvrige medlemmer har været de samme gennem hele karrieren. Gruppen har siden 2000 årligt turneret i især USA og Europa. Bandet har valgt at udgive samtlige koncerter som enten downloads eller fysiske albums. Eddie Vedder er desuden begyndt at turnere solo.",
+    "ImageName": "PearlJam.jpg"
   }
 ]
