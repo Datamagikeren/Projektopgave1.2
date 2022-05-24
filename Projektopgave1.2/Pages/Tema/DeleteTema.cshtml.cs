@@ -12,11 +12,13 @@ namespace Projektopgave1._2
         public Tema Tema { get; set; }
 
         private ITemaRepository repo;
+        private IUdstillingRepository urepo;
         public List<Tema> Temaer { get; set; }
 
-        public DeleteTemaModel(ITemaRepository repository)
+        public DeleteTemaModel(ITemaRepository repository, IUdstillingRepository urepos)
         {
             repo = repository;
+            urepo = urepos;
         }
 
         public IActionResult OnGet(int id)
@@ -28,12 +30,15 @@ namespace Projektopgave1._2
 
         public IActionResult OnPost()
         {
+            Temaer = repo.GetAllTema();
             if (!ModelState.IsValid)
             {
                 return Page();
             }
+            urepo.DeleteTemasUdstillinger(Tema, Temaer);
             repo.DeleteTema(Tema);
-            Temaer = repo.GetAllTema();
+            
+            
             return RedirectToPage("AllTema");
         }
     }
