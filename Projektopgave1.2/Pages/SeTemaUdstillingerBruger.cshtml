@@ -2,6 +2,8 @@
 @model Projektopgave1._2.SeTemaUdstillingerBrugerModel
 @{
 }
+
+<h1> Vælg udstilling </h1>
 <div class="containerBruger">
     <div class="row">
 
@@ -9,9 +11,9 @@
         {
 
             <div class="column-2 p-2">
-                <div class="card bg-dark text-white">
+                <div class="card bg-dark text-white mx-auto">
 
-                    <a asp-page="HørUdstillingBruger" asp-route-id="@item.Id"> <img src="~/images/@item.ImageName" width="500" height="250" alt="Card image"></a>
+                    <a asp-page="HørUdstillingBruger" asp-route-id="@item.Id"> <img src="~/images/@item.ImageName" width="550" height="300" alt="Card image"></a>
                     
 
 
