@@ -3,16 +3,9 @@
 @{
 }
 
-<style>
-    h5 {
-        text-align: center;
-        color: blueviolet
-    }
-</style>
 
-<h5>The number of themes are : @Model.Temaer.Count</h5>
 
-<h6 style="color:blue"> Create a new theme</h6>
+<h2 class="crud-heading">Tilføj nyt tema</h2>
 <form class="form-horizontal" method="post">
     <div asp-validation-summary="ModelOnly"></div>
     <div class="form-group" style="width:25%">
@@ -52,14 +45,38 @@
         </div>
     </div>
 
+    <button type="button" class="btn btn-primary tilføj-tema-knap" data-toggle="modal" data-target="#exampleModal">
+        Tilføj Tema
+    </button>
 
-
-
-    <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="border-light">
-                Add Theme
-            </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Er du sikker på du vil tilføje dette tema?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuller</button>
+                    <button type="submit" class="btn btn-primary">OK</button>
+                </div>
+            </div>
         </div>
     </div>
+
+
+    
 </form>
+<style>
+    .tilføj-tema-knap {
+        margin-left:15px;
+    }
+
+    .crud-heading {
+        margin-left: 15px;
+    }
+
+</style>
