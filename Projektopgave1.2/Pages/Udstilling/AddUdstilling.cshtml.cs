@@ -32,6 +32,20 @@ namespace Projektopgave1._2
         }
         public IActionResult OnPost()
         {
+            List<Udstilling> udstillinger = repo.GetAllUdstilling();
+            List<int> idsToFind = new List<int>();
+            foreach (var u in udstillinger)
+            {
+                idsToFind.Add(u.Id);
+            }
+
+            if (idsToFind.Contains(Udstilling.Id))
+            {
+
+                ViewData["Message"] = "Id eksisterer allerede";
+                return Page();
+
+            }
             if (!ModelState.IsValid)
             {
                 return Page();

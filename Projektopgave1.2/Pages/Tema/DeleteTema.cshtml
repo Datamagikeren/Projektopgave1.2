@@ -8,12 +8,7 @@
 <div>
     <form method="post">
         <dl class="row">
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Tema.Id)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Tema.Id)
-            </dd>
+
             <dt class="col-sm-2">
                 @Html.DisplayNameFor(model => model.Tema.Name)
             </dt>
@@ -21,20 +16,54 @@
                 @Html.DisplayFor(model => model.Tema.Name)
             </dd>
             <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Tema.Id)
+
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Tema.Id)
+            </dd>
+            <dt class="col-sm-2">
                 @Html.DisplayNameFor(model => model.Tema.Description)
             </dt>
             <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.Tema.Description)
             </dd>
-            
+
             <dt class="col-sm-2">
                 @Html.DisplayNameFor(model => model.Tema.ImageName)
             </dt>
             <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.Tema.ImageName)
             </dd>
+
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Tema.Kode)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Tema.Kode)
+            </dd>
         </dl>
-        <input type="submit" value="Delete" class="btn btn-danger" />
+        <button type="button" class="btn btn-primary tilføj-tema-knap" data-toggle="modal" data-target="#exampleModal">
+            Slet Tema
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Er du sikker på du vil slette dette tema?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuller</button>
+                        <button type="submit" value="Delete"  class="btn btn-primary">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </form>
     <div>
         <a asp-page="AllTema">Back to List</a>

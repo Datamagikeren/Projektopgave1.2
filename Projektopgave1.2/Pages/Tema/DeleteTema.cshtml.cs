@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Projektopgave1._2.Interfaces;
 using Projektopgave1._2.Models;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Projektopgave1._2
 {
@@ -31,14 +32,8 @@ namespace Projektopgave1._2
         public IActionResult OnPost()
         {
             Temaer = repo.GetAllTema();
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
             urepo.DeleteTemasUdstillinger(Tema, Temaer);
-            repo.DeleteTema(Tema);
-            
-            
+            repo.DeleteTema(Tema);            
             return RedirectToPage("AllTema");
         }
     }

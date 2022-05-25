@@ -51,56 +51,11 @@
     <a asp-page="Index">Back to List</a>
 </div>
 
-@*<style>
-        h5 {
-            text-align: center;
-            color: blueviolet
-        }
-    </style>
-
-    <h5>The number of themes are : @Model.Udstillinger.Count</h5>
-
-    <h6 style="color:blue"> Create a new theme</h6>
-    <form class="form-horizontal" method="post">
-        <div asp-validation-summary="ModelOnly"></div>
-        <div class="form-group" style="width:25%">
-            <label asp-for="@Model.Udstilling.Name" class="col-sm-2 control-label"></label>
-            <div class="col-sm-10">
-                <input asp-for="@Model.Udstilling.Name" type="text" class="form-control">
-                <span asp-validation-for="@Model.Udstilling.Name" class="text-danger"></span>
-            </div>
-        </div>
-        <div style="width:25%" class="form-group">
-            <label asp-for="@Model.Udstilling.Id" class="col-sm-2 control-label"></label>
-            <div class="col-sm-10">
-                <input asp-for="@Model.Udstilling.Id" type="text" class="form-control">
-                <span asp-validation-for="@Model.Udstilling.Id" class="text-danger"></span>
-            </div>
-        </div>
-        <div style="width:25%" class="form-group">
-            <label asp-for="@Model.Udstilling.Description" class="col-sm-2 control-label"></label>
-            <div class="col-sm-10">
-                <input asp-for="@Model.Udstilling.Description" type="text" class="form-control">
-                <span asp-validation-for="@Model.Udstilling.Description" class="text-danger"></span>
-            </div>
-        </div>
-
-        <div style="width:25%" class="form-group">
-            <label asp-for="@Model.Udstilling.ImageName" class="col-sm-2 control-label"></label>
-            <div class="col-sm-10">
-                <input asp-for="@Model.Udstilling.ImageName" type="text" class="form-control">
-                <span asp-validation-for="@Model.Udstilling.ImageName" class="text-danger"></span>
-            </div>
-        </div>
-
-
-
-
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="border-light">
-                    Add Theme
-                </button>
-            </div>
-        </div>
-    </form>*@
+@if (ViewData["Message"] != null)
+{
+    <script type="text/javascript">
+            window.onload = function () {
+                alert("@ViewData["Message"]");
+            };
+    </script>
+}
