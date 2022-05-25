@@ -27,12 +27,28 @@ namespace Projektopgave1._2
         }
         public IActionResult OnPost()
         {
+            Temaer = repo.GetAllTema();
+            List<int> idsToFind = new List<int>();
+            foreach (var t in Temaer)
+            {
+                idsToFind.Add(t.Id);
+            }
+            
+
+            if (idsToFind.Contains(Tema.Id))
+            {
+
+                ViewData["Message"] = "Id eksisterer allerede";
+                return Page();
+
+            }
             if (!ModelState.IsValid)
             {
+                
                 return Page();
             }
-            repo.AddTema(Tema);
-            Temaer = repo.GetAllTema();
+                repo.AddTema(Tema);
+            
             return RedirectToPage("AllTema");
         }
     }

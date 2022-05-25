@@ -68,15 +68,23 @@
     </div>
 
 
-    
+
 </form>
+
+@if (ViewData["Message"] != null)
+{
+    <script type="text/javascript">
+            window.onload = function () {
+                alert("@ViewData["Message"]");
+            };
+    </script>
+}
 <style>
     .tilføj-tema-knap {
-        margin-left:15px;
+        margin-left: 15px;
     }
 
     .crud-heading {
         margin-left: 15px;
     }
-
 </style>
