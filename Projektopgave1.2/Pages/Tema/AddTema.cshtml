@@ -79,6 +79,22 @@
             };
     </script>
 }
+@if (ViewData["Message2"] != null)
+{
+    <script type="text/javascript">
+            window.onload = function () {
+                alert("@ViewData["Message2"]");
+            };
+    </script>
+}
+@if (ViewData["Message3"] != null)
+{
+    <script type="text/javascript">
+            window.onload = function () {
+                alert("@ViewData["Message3"]");
+            };
+    </script>
+}
 <style>
     .tilføj-tema-knap {
         margin-left: 15px;

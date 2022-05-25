@@ -33,8 +33,26 @@ namespace Projektopgave1._2
             {
                 idsToFind.Add(t.Id);
             }
-            
 
+            List<string> koderToFind = new List<string>();
+            foreach(var t in Temaer)
+            {
+                koderToFind.Add(t.Kode);
+            }
+
+            if (idsToFind.Contains(Tema.Id) && koderToFind.Contains(Tema.Kode))
+            {
+
+                ViewData["Message3"] = "Id og Kode eksisterer allerede";
+                return Page();
+
+            }
+
+            if (koderToFind.Contains(Tema.Kode))
+            {
+                ViewData["Message2"] = "Kode eksisterer allerede";
+                return Page();
+            }
             if (idsToFind.Contains(Tema.Id))
             {
 
@@ -42,6 +60,7 @@ namespace Projektopgave1._2
                 return Page();
 
             }
+            
             if (!ModelState.IsValid)
             {
                 
