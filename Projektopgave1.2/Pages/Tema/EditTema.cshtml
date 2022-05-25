@@ -23,6 +23,8 @@
         <input asp-for="@Model.Tema.ImageName" class="form-control" />
         <span asp-validation-for="@Model.Tema.ImageName" class="text-danger"></span>
     </div>
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="@Model.Tema.Kode" />
 
     <div class="form-group">
         <input type="submit" value="Save" class="btn btn-primary" />
