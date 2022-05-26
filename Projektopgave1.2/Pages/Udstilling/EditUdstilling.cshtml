@@ -23,8 +23,10 @@
         <input asp-for="@Model.Udstilling.ImageName" class="form-control" />
         <span asp-validation-for="@Model.Udstilling.ImageName" class="text-danger"></span>
     </div>
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="@Model.Udstilling.TemaKode" />
 
-    <button type="button" class="btn btn-primary tilføj-tema-knap" data-toggle="modal" data-target="#exampleModal">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
         Rediger Udstilling
     </button>
 

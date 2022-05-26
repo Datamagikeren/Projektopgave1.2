@@ -27,12 +27,24 @@ namespace Projektopgave1._2
         }
         public IActionResult OnPost()
         {
+            Kunstnere = repo.GetAllKunstner();
+            List<int> idsToFind = new List<int>();
+            foreach (var u in Kunstnere)
+            {
+                idsToFind.Add(u.Id);
+            }
+            if (idsToFind.Contains(Kunstner.Id))
+            {
+
+                ViewData["Message"] = "Id eksisterer allerede";
+                return Page();
+
+            }
             if (!ModelState.IsValid)
             {
                 return Page();
             }
             repo.AddKunstner(Kunstner);
-            Kunstnere = repo.GetAllKunstner();
             return RedirectToPage("AllKunstner");
         }
     }

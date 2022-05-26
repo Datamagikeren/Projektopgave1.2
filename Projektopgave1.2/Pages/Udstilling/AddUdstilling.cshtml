@@ -2,7 +2,7 @@
 @model Projektopgave1._2.AddUdstillingModel
 @{
 }
-<h1>CreateUdstilling</h1>
+<h3>Opret ny Udstilling</h3>
 <div class="row">
     <div class="col-md-4">
         <form method="post">
@@ -41,8 +41,26 @@
                 </select>
                 <span asp-validation-for="@Model.Udstilling.TemaKode" class="text-danger" />
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Opret Udstilling
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Er du sikker på du vil oprette denne udstilling?</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuller</button>
+                            <button type="submit" class="btn btn-primary">OK</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </form>
     </div>
@@ -56,6 +74,22 @@
     <script type="text/javascript">
             window.onload = function () {
                 alert("@ViewData["Message"]");
+            };
+    </script>
+}
+@if (ViewData["Message2"] != null)
+{
+    <script type="text/javascript">
+            window.onload = function () {
+                alert("@ViewData["Message2"]");
+            };
+    </script>
+}
+@if (ViewData["Message3"] != null)
+{
+    <script type="text/javascript">
+            window.onload = function () {
+                alert("@ViewData["Message3"]");
             };
     </script>
 }

@@ -12,12 +12,10 @@ namespace Projektopgave1._2.Models
         public string Name { get; set; }
         public int Id { get; set; }
         public string Description { get; set; }
-        [Required(ErrorMessage = "Kode skal være udfyldt")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "KodeTema ikke udfyldt")]
         public string TemaKode { get; set; }
         public double Duration { get; set; }
 
         public string ImageName { get; set; }
-
-        
     }
 }

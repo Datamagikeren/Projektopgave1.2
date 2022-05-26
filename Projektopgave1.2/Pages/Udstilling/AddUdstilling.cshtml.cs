@@ -38,14 +38,21 @@ namespace Projektopgave1._2
             {
                 idsToFind.Add(u.Id);
             }
+            //if (idsToFind.Contains(Udstilling.Id) && Udstilling.TemaKode == null)
+            //{
+            //    ViewData["Message"] = "Id eksisterer allerede og TemaKode mangler";
+            //}
 
             if (idsToFind.Contains(Udstilling.Id))
             {
-
                 ViewData["Message"] = "Id eksisterer allerede";
-                return Page();
-
             }
+
+            //if(Udstilling.TemaKode == null)
+            //{
+            //    ViewData["Message"] = "Udstilling mangle TemaKode";
+            //}
+
             if (!ModelState.IsValid)
             {
                 return Page();

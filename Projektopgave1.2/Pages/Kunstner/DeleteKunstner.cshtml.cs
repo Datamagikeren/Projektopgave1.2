@@ -28,10 +28,6 @@ namespace Projektopgave1._2
         }
         public IActionResult OnPost()
         {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
             repo.DeleteKunstner(Kunstner);
             Kunstnere = repo.GetAllKunstner();
             return RedirectToPage("AllKunstner");
