@@ -39,8 +39,9 @@
                         asp-items="@Model.TemaKoder">
                     <option value="">-- Select Code --</option>
                 </select>
-                <span asp-validation-for="@Model.Udstilling.TemaKode" class="text-danger" />
+                <span asp-validation-for="@Model.Udstilling.TemaKode" class="text-danger"></span>
             </div>
+
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                 Opret Udstilling
             </button>
