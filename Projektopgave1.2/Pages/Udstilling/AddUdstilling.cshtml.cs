@@ -42,6 +42,7 @@ namespace Projektopgave1._2
             if (idsToFind.Contains(Udstilling.Id))
             {
                 ViewData["Message"] = "Id eksisterer allerede";
+                return Page();
             }
 
             if (!ModelState.IsValid)
