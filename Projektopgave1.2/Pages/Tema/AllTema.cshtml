@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "AllTema";
 }
-<h1> AllTema </h1>
+<h1> Temaer </h1>
 <table class="table">
     <thead>
         <tr>
@@ -33,8 +33,8 @@
                     </td>
                     <td>
                         <p>
-                            <a asp-page="EditTema" asp-route-id="@item.Id">Edit</a> |
-                            <a asp-page="DeleteTema" asp-route-id="@item.Id">Delete</a> |
+                            <a asp-page="EditTema" asp-route-id="@item.Id">Rediger</a> |
+                            <a asp-page="DeleteTema" asp-route-id="@item.Id">Slet</a> |
                             <a asp-page="SeTema" asp-route-id="@item.Id"> Se Tema</a>  |
 
                         </p>
@@ -52,6 +52,3 @@
    class="text-dark btn btn-warning col-auto pull-right">
     Se kunstnere
 </a>
-<div>
-    <a href="javascript:history.back()" class="btn btn-secondary m-1">Tilbage</a>
-</div>

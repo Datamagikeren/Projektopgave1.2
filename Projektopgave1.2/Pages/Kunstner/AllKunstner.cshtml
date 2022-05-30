@@ -2,7 +2,7 @@
 @model Projektopgave1._2.AllKunstnerModel
 @{
 }
-<h1> AllKunstner </h1>
+<h1> Kunstnere </h1>
 <table class="table">
     <thead>
         <tr>
@@ -32,9 +32,9 @@
             </td>
             <td>
                 <p>
-                    <a asp-page="EditKunstner" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-page="DeleteKunstner" asp-route-id="@item.Id">Delete</a> |
-                    <a asp-page="SeKunstner" asp-route-id="@item.Id"> Se Kunstner</a>  
+                    <a asp-page="EditKunstner" asp-route-id="@item.Id">Rediger</a> |
+                    <a asp-page="DeleteKunstner" asp-route-id="@item.Id">Slet</a> |
+                    
                 </p>
             </td>
         </tr>
@@ -46,5 +46,5 @@
     Create kunstner
 </a>
 <div>
-    <a href="javascript:history.back()" class="btn btn-secondary m-1">Tilbage</a>
+    <a asp-page="../Tema/AllTema" class="btn btn-secondary m-1">Tilbage</a>
 </div>
