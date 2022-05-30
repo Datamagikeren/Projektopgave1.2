@@ -136,7 +136,58 @@
         margin-left: 70%;
         position: relative;
     }
+        .læs-med-btn:hover {
+            background-color: #0645AD;
+        }
 
+
+    /* Dropdown Button */
+    .dropbtn {
+        background-color: #dfdbdf;
+        color: white;
+        padding: 2px, 6px;
+        font-size: 13px;
+        border: none;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        font-size: 13px;
+    }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 2px 6px;
+            text-decoration: none;
+            display: block;
+        }
+
+            /* Change color of dropdown links on hover */
+            .dropdown-content a:hover {
+                background-color: #ddd;
+            }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {
+        background-color: #0645AD;
+    } 
 </style>
 
 <head>
@@ -168,7 +219,14 @@
                     <input type="range" class="seek_slider">
                     <div class="total-duration">@Html.DisplayFor(model => model.Udstilling.Duration)</div>
                 </div>
-
+                <div class="dropdown">
+                    <button class="dropbtn"> 1x </button>
+                    <div class="dropdown-content">
+                        <a href="#">0.75x</a>
+                        <a href="#">1.25x</a>
+                        <a href="#">1.5x</a>
+                    </div>
+                </div>
 
                 <div id="music-container">
                     <div class="navigation">
@@ -177,47 +235,12 @@
                         <a href="#" id="play" class="action-btn action-btn-big"><i class="fas fa-play"></i></a>
                         <a href="#" class="action-btn"> <i class="fas fa-forward"></i></a>
                         <a href="#" class="action-btn"> <i class="fas fa-redo"></i></a>
-                        @*<button id="prev" >*@
-                        <!--<a href="#" class="action-btn"> <i class="fas fa-undo"></i></a>-->
-                        @*</button>*@
-                        <!--<button id="prev" class="action-btn">
-                            <i class="fas fa-backward"></i>
-                        </button>-->
-                        @*<button id="play" class="action-btn action-btn-big">*@
-                        <!--<a href="#" id="play" class="action-btn action-btn-big"><i class="fas fa-play"></i></a>-->
-                        @*</button>*@
-                        <!--<button id="next" class="action-btn">
-                            <i class="fas fa-forward"></i>
-                        </button>
-                        <button id="prev" class="action-btn">
-                            <i class="fas fa-redo"></i>
-                        </button>-->
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
-
-    <!-- Modal ikke scroll-->
-    @*<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">@Html.DisplayFor(model => model.Udstilling.Name)</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        @Html.DisplayFor(model => model.Udstilling.Description)
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Luk</button>
-                    </div>
-                </div>
-            </div>
-        </div>*@
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
