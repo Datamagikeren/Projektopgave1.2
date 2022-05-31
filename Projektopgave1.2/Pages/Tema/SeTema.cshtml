@@ -35,36 +35,36 @@
                 @foreach (var item in Model.Udstillinger)
                 {
                     <tr>
-                        <td>
+                        <td class="overskrift">
                             @item.Id
                         </td>
-                        <td>
+                        <td class="overskrift">
                             @item.Name
                         </td>
-                        <td>
+                        <td class="overskrift">
                             @item.Description
                         </td>
-                        <td>
+                        <td class="overskrift">
                             @item.ImageName
                         </td>
-                        <td>
+                        <td class="overskrift">
                             @item.TemaKode
                         </td>
                         <td>
-                            <a asp-page="../Udstilling/EditUdstilling" asp-route-id="@item.Id">Rediger</a>|
-                            <a asp-page="../Udstilling/DeleteUdstilling" asp-route-id="@item.Id">Slet</a>
+                            <a class="overskrift" asp-page="../Udstilling/EditUdstilling" asp-route-id="@item.Id">Rediger</a>|
+                            <a class="overskrift" asp-page="../Udstilling/DeleteUdstilling" asp-route-id="@item.Id">Slet</a>
                         </td>
                     </tr>
                 }
             </tbody>
         </table>
-        <div>
-            <a asp-page="AllTema" class="btn btn-secondary m-1">Tilbage</a>
-        </div>
 
-        <a asp-page="/Udstilling/AddUdstilling"
+        <a class="overskrift" asp-page="/Udstilling/AddUdstilling"
            class="btn btn-success btn-group-lg pull-right">
             Create Udstilling
         </a>
+        <div>
+            <a class="overskrift" asp-page="AllTema" class="btn btn-secondary m-1">Tilbage</a>
+        </div>
     </div>
 </body>
