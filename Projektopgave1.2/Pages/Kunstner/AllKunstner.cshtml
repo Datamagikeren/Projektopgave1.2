@@ -5,7 +5,7 @@
 <div class="overskrift"><h1>Kunstnere</h1></div>
 <table class="table">
     <thead>
-        <tr>
+        <tr class="overskrift">
             <th>Name </th>
             <th>Id</th>
             <th>Description</th>
@@ -17,7 +17,7 @@
         {
         @foreach (var item in Model.Kunstnere)
         {
-        <tr>
+        <tr class="overskrift">
             <td>
                 @item.Name
             </td>
@@ -42,9 +42,9 @@
     </tbody>
 </table>
 <a asp-page="AddKunstner"
-   class="btn btn-success btn-group-lg pull-right">
+   class="overskrift btn btn-success btn-group-lg pull-right">
     Create kunstner
 </a>
 <div>
-    <a asp-page="../Tema/AllTema" class="btn btn-secondary m-1">Tilbage</a>
+    <a asp-page="../Tema/AllTema" class="overskrift btn btn-secondary m-1">Tilbage</a>
 </div>

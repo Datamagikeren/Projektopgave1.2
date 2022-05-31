@@ -4,7 +4,7 @@
     ViewData["Title"] = "AllTema";
 }
 <div class="overskrift"><h1>Temaer</h1></div>
-<table class="table">
+<table class="overskrift table">
     <thead>
         <tr>
             <th>Name </th>
@@ -18,7 +18,7 @@
         {
             @foreach (var item in Model.Temaer)
             {
-                <tr>
+                <tr class="overskrift">
                     <td>
                         @item.Name
                     </td>
@@ -44,11 +44,11 @@
     </tbody>
 </table>
 <a asp-page="AddTema"
-   class="text-dark btn btn-success col-auto pull-left">
+   class="overskrift text-dark btn btn-success col-auto pull-left">
     Opret tema
 </a>
 
 <a asp-page="../Kunstner/AllKunstner"
-   class="text-dark btn btn-warning col-auto pull-right">
+   class="overskrift text-dark btn btn-warning col-auto pull-right">
     Se kunstnere
 </a>

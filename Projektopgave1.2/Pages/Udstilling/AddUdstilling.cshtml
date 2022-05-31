@@ -5,7 +5,7 @@
 
 <div class="overskrift"><h1>Opret Udstilling</h1></div>
 <div class="row">
-    <div class="col-md-4">
+    <div class="overskrift col-md-4">
         <form method="post">
             <div asp-validation-summary="None " class="text-danger">
             </div>
@@ -43,7 +43,7 @@
                 <span asp-validation-for="@Model.Udstilling.TemaKode" class="text-danger"></span>
             </div>
 
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            <button type="button" class="overskrift btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                 Opret Udstilling
             </button>
 
@@ -58,8 +58,8 @@
                             </button>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuller</button>
-                            <button type="submit" class="btn btn-primary">OK</button>
+                            <button type="button" class="overskrift btn btn-secondary" data-dismiss="modal">Annuller</button>
+                            <button type="submit" class="overskrift btn btn-primary">OK</button>
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
     </div>
 </div>
 <div>
-    <a href="javascript:history.back()" class="btn btn-secondary mt-1">Tilbage</a>
+    <a href="javascript:history.back()" class="overskrift btn btn-secondary mt-1">Tilbage</a>
 </div>
 
 @if (ViewData["Message"] != null)

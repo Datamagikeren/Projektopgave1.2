@@ -7,27 +7,27 @@
 
 <p>ID @Model.Tema.Id</p>
 <form method="post">
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div asp-validation-summary="ModelOnly" class="overskrift text-danger"></div>
     <input type="hidden" asp-for="@Model.Tema.Id" />
-    <div class="form-group">
+    <div class="overskrift form-group">
         <label asp-for="@Model.Tema.Name" class="control-label"></label>
         <input asp-for="@Model.Tema.Name" class="form-control" />
         <span asp-validation-for="@Model.Tema.Name" class="text-danger"></span>
     </div>
-    <div class="form-group">
+    <div class="overskrift form-group">
         <label asp-for="@Model.Tema.Description" class="control-label"></label>
         <input asp-for="@Model.Tema.Description" class="form-control" />
         <span asp-validation-for="@Model.Tema.Description" class="text-danger"></span>
     </div>
-    <div class="form-group">
+    <div class="overskrift form-group">
         <label asp-for="@Model.Tema.ImageName" class="control-label"></label>
         <input asp-for="@Model.Tema.ImageName" class="form-control" />
         <span asp-validation-for="@Model.Tema.ImageName" class="text-danger"></span>
     </div>
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div asp-validation-summary="ModelOnly" class="overskrift text-danger"></div>
     <input type="hidden" asp-for="@Model.Tema.Kode" />
 
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    <button type="button" class="overskrift btn btn-primary" data-toggle="modal" data-target="#exampleModal">
         Rediger Tema
     </button>
 
@@ -42,13 +42,13 @@
                     </button>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuller</button>
-                    <button type="submit" value="Save" class="btn btn-primary">OK</button>
+                    <button type="button" class="overskrift btn btn-secondary" data-dismiss="modal">Annuller</button>
+                    <button type="submit" value="Save" class="overskrift btn btn-primary">OK</button>
                 </div>
             </div>
         </div>
     </div>
 </form>
 <div>
-    <a href="javascript:history.back()" class="btn btn-secondary mt-1">Tilbage</a>
+    <a href="javascript:history.back()" class="overskrift btn btn-secondary mt-1">Tilbage</a>
 </div>
