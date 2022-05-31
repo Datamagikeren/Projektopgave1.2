@@ -2,11 +2,10 @@
 @model Projektopgave1._2.BrugerKunstnerModel
 @{
 }
-<h1> Læs om Kunstnerne </h1>
-
+<div class="overskrift"><h1>Læs om Kunstnerne</h1></div>
     
 <div class="containerBruger">
-    <div class="row">
+    <div class="overskrift row">
         @if (Model.Kunstnere.Count != 0)
         {
             @foreach (var item in Model.Kunstnere)
@@ -29,7 +28,7 @@
         }
     </div>
     <div>
-        <a href="javascript:history.back()" class="btn btn-secondary m-1">Tilbage</a>
+        <a href="javascript:history.back()" class="overskrift btn btn-secondary m-1">Tilbage</a>
     </div>
 </div>
 

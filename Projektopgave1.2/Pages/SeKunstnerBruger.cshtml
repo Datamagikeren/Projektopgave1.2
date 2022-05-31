@@ -2,14 +2,14 @@
 @model Projektopgave1._2.SeKunstnerBrugerModel
 @{
 }
-<h1>Se Kunstner</h1>
 
+<div class="overskrift"><h1>Se Kunstner</h1></div>
 <dd>
     <div>
         <img src="~/images/@Html.DisplayFor(model => model.Kunstner.ImageName) " class="track-art center">
     </div>
     <form method="post">
-        <dl class="row">
+        <dl class="overskrift row">
 
 
             <dt class="col-sm-2">
@@ -29,6 +29,6 @@
 
     </form>
     <div>
-        <a href="javascript:history.back()" class="btn btn-secondary m-1">Tilbage</a>
+        <a href="javascript:history.back()" class="overskrift btn btn-secondary m-1">Tilbage</a>
     </div>
     </div>

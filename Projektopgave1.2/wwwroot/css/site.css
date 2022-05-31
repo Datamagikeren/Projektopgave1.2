@@ -315,3 +315,7 @@ body {
 .dropdown:hover .dropbtn {
     background-color: #0645AD;
 }
+
+.overskrift {
+    font-family: 'Times New Roman', sans-serif;
+}
