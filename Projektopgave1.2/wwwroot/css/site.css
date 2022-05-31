@@ -134,3 +134,184 @@ body {
 .mybutton{
     margin-bottom: 30px;
 }
+
+/*MusikApspiller:*/
+.player-body {
+    font-family: 'Times New Roman', Helvetica, sans-serif;
+    color: whitesmoke;
+    margin: -1%;
+}
+
+.player {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wrapper {
+    border: 1px solid transparent;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.track-art {
+    margin: 17px;
+    height: 250px;
+    width: 250px;
+    border: 2px solid #fff;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    -moz-box-shadow: 0px 6px 5px #ccc;
+    -webkit-box-shadow: 0px 6px 5px #ccc;
+    box-shadow: 0px 6px 5px #ccc;
+    /* -moz-border-radius:190px;
+    -webkit-border-radius:190px;
+    border-radius: 190px;*/
+}
+
+.track-name {
+    font-size: 2.5rem;
+    color: black;
+}
+
+
+
+
+.slider_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seek_slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 5px;
+    background: #83a9ff;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+    .seek_slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 15px;
+        height: 15px;
+        background: white;
+        border: 3px solid #3774ff;
+        cursor: pointer;
+        border-radius: 100%;
+    }
+
+    .seek_slider:hover {
+        opacity: 1.0;
+    }
+
+.seek_slider {
+    width: 60%;
+}
+
+.current-time,
+.total-duration {
+    padding: 10px;
+    color: #dfdbdf;
+}
+
+
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.action-btn {
+    background-color: #fff;
+    border: 0;
+    color: #dfdbdf;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 2px;
+    margin: 0 20px;
+}
+
+    .action-btn.action-btn-big {
+        font-size: 30px;
+    }
+
+.back-button {
+    margin-left: 1%;
+    position: absolute;
+    color: #dfdbdf;
+}
+
+.læs-med-btn {
+    background-color: #dfdbdf;
+    margin-left: 70%;
+    position: relative;
+}
+
+    .læs-med-btn:hover {
+        background-color: #0645AD;
+    }
+
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #dfdbdf;
+    color: white;
+    padding: 2px, 6px;
+    font-size: 13px;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-size: 13px;
+}
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: black;
+        padding: 2px 6px;
+        text-decoration: none;
+        display: block;
+    }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #0645AD;
+}

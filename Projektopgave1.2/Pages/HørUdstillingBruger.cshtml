@@ -9,135 +9,6 @@
 
     //kanpper og javascript:
     https://github.com/bradtraversy/vanillawebprojects/tree/master/music-player*@
-<style>
-    .player-body {
-        font-family: 'Times New Roman', Helvetica, sans-serif;
-        color: whitesmoke;
-        margin: -1%;
-    }
-
-    .player {
-        height: 90vh;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .wrapper {
-        border: 1px solid transparent;
-        padding: 10px;
-        border-radius: 20px;
-        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    }
-
-    .details {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .track-art {
-        margin: 17px;
-        height: 250px;
-        width: 250px;
-        border: 2px solid #fff;
-        background-size: cover;
-        background-position: center;
-        border-radius: 50%;
-        -moz-box-shadow: 0px 6px 5px #ccc;
-        -webkit-box-shadow: 0px 6px 5px #ccc;
-        box-shadow: 0px 6px 5px #ccc;
-        /* -moz-border-radius:190px;
-    -webkit-border-radius:190px;
-    border-radius: 190px;*/
-    }
-
-    .track-name {
-        font-size: 2.5rem;
-        color: black;
-    }
-
-
-
-
-    .slider_container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .seek_slider {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        height: 5px;
-        background: #83a9ff;
-        -webkit-transition: .2s;
-        transition: opacity .2s;
-    }
-
-        .seek_slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            width: 15px;
-            height: 15px;
-            background: white;
-            border: 3px solid #3774ff;
-            cursor: pointer;
-            border-radius: 100%;
-        }
-
-        .seek_slider:hover {
-            opacity: 1.0;
-        }
-
-    .seek_slider {
-        width: 60%;
-    }
-
-    .current-time,
-    .total-duration {
-        padding: 10px;
-        color: #dfdbdf;
-    }
-
-
-
-    .navigation {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 1;
-    }
-
-    .action-btn {
-        background-color: #fff;
-        border: 0;
-        color: #dfdbdf;
-        font-size: 20px;
-        cursor: pointer;
-        padding: 2px;
-        margin: 0 20px;
-    }
-
-        .action-btn.action-btn-big {
-            
-            font-size: 30px;
-        }
-
-    .back-button {
-        margin-left: 1%;
-        position: absolute;
-        color: #dfdbdf;
-    }
-    .læs-med-btn {
-        background-color: #dfdbdf;
-        margin-left: 70%;
-        position: relative;
-    }
-
-</style>
 
 <head>
     <meta charset="UTF-8">
@@ -168,7 +39,14 @@
                     <input type="range" class="seek_slider">
                     <div class="total-duration">@Html.DisplayFor(model => model.Udstilling.Duration)</div>
                 </div>
-
+                <div class="dropdown">
+                    <button class="dropbtn"> 1x </button>
+                    <div class="dropdown-content">
+                        <a href="#">0.75x</a>
+                        <a href="#">1.25x</a>
+                        <a href="#">1.5x</a>
+                    </div>
+                </div>
 
                 <div id="music-container">
                     <div class="navigation">
@@ -177,47 +55,12 @@
                         <a href="#" id="play" class="action-btn action-btn-big"><i class="fas fa-play"></i></a>
                         <a href="#" class="action-btn"> <i class="fas fa-forward"></i></a>
                         <a href="#" class="action-btn"> <i class="fas fa-redo"></i></a>
-                        @*<button id="prev" >*@
-                        <!--<a href="#" class="action-btn"> <i class="fas fa-undo"></i></a>-->
-                        @*</button>*@
-                        <!--<button id="prev" class="action-btn">
-                            <i class="fas fa-backward"></i>
-                        </button>-->
-                        @*<button id="play" class="action-btn action-btn-big">*@
-                        <!--<a href="#" id="play" class="action-btn action-btn-big"><i class="fas fa-play"></i></a>-->
-                        @*</button>*@
-                        <!--<button id="next" class="action-btn">
-                            <i class="fas fa-forward"></i>
-                        </button>
-                        <button id="prev" class="action-btn">
-                            <i class="fas fa-redo"></i>
-                        </button>-->
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
-
-    <!-- Modal ikke scroll-->
-    @*<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">@Html.DisplayFor(model => model.Udstilling.Name)</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        @Html.DisplayFor(model => model.Udstilling.Description)
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Luk</button>
-                    </div>
-                </div>
-            </div>
-        </div>*@
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -238,32 +81,4 @@
             </div>
         </div>
     </div>
-    <script>
-        const musicContainer = document.getElementById('music-container');
-        const playBtn = document.getElementById('play');
-        // Play song
-        function playSong() {
-            musicContainer.classList.add('play');
-            playBtn.querySelector('i.fas').classList.remove('fa-play');
-            playBtn.querySelector('i.fas').classList.add('fa-pause');
-        }
-        // Pause song
-        function pauseSong() {
-            musicContainer.classList.remove('play');
-            playBtn.querySelector('i.fas').classList.add('fa-play');
-            playBtn.querySelector('i.fas').classList.remove('fa-pause');
-        }
-        // Event listeners
-        playBtn.addEventListener('click', () => {
-            const isPlaying = musicContainer.classList.contains('play');
-
-            if (isPlaying) {
-                pauseSong();
-            } else {
-                playSong();
-            }
-        });
-    </script>
-   
-
 </body>
