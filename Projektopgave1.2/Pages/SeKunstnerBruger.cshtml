@@ -3,7 +3,7 @@
 @{
 }
 
-<div class="overskrift"><h1>Se Kunstner</h1></div>
+<div class="overskrift"><h1>@Html.DisplayFor(model => model.Kunstner.Name)</h1></div>
 <dd>
     <div>
         <img src="~/images/@Html.DisplayFor(model => model.Kunstner.ImageName) " class="track-art center">

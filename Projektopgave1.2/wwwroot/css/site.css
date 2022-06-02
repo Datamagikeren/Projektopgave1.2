@@ -98,6 +98,7 @@ body {
     transform: translate(-50%, -50%);
     font-family: 'Times New Roman', sans-serif;
     font-size: 35px;
+    color: white;
 }
 
 .centeredDesrib {
@@ -107,6 +108,7 @@ body {
     transform: translate(-50%, -50%);
     font-family: 'Times New Roman', sans-serif;
     font-size: 20px;
+    color: white;
 }
 .dropdown:hover .dropdown-menu {
     display: block;

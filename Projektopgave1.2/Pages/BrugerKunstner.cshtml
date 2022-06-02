@@ -13,15 +13,10 @@
 
                 <div class="column-2 p-2 mx-auto">
                     <div class="card bg-dark text-white">
-
-
-                        <a asp-page="SeKunstnerBruger" asp-route-id="@item.Id"> <img src="~/images/@item.ImageName" width="550" height="300" alt="Card image"></a>
-
-
-
-                        <p class="centeredTitle"><strong>@item.Name</strong></p>
-
-
+                        <a asp-page="SeKunstnerBruger" asp-route-id="@item.Id">
+                            <img src="~/images/@item.ImageName" width="550" height="300" alt="Card image">
+                            <p class="centeredTitle"><strong>@item.Name</strong></p>
+                        </a>
                     </div>
                 </div>
             }
