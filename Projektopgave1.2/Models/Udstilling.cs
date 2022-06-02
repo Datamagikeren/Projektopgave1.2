@@ -14,7 +14,7 @@ namespace Projektopgave1._2.Models
         public string Description { get; set; }
         [Required(ErrorMessage = "TemaKode skal være udfyldt")]
         public string TemaKode { get; set; }
-        public double Duration { get; set; }
+        public string Duration { get; set; }
 
         public string ImageName { get; set; }
     }
