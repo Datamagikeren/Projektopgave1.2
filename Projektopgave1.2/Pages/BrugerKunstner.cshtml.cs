@@ -11,18 +11,44 @@ namespace Projektopgave1._2
 {
     public class BrugerKunstnerModel : PageModel
     {
-        private IKunstnerRepository repo;
+        private IKunstnerRepository repog;
         public BrugerKunstnerModel(IKunstnerRepository repository)
         {
-            repo = repository;
-        }
+            repog = repository;
+        }'
+
+        public int MyProperty { get; set; }
+
+
+
+
+
+        public int andzitoproperty { get; set; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public int silkestfu { get; set; }
         public List<Kunstner> Kunstnere { get; private set; }
         [BindProperty]
         public Kunstner Kunstner { get; set; }
         public IActionResult OnGet()
         {
             Kunstner = new Kunstner();
-            Kunstnere = repo.GetAllKunstner();
+            Kunstnere = repog.GetAllKunstner();
             return Page();
         }
     }
