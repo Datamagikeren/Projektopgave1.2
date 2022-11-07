@@ -15,7 +15,33 @@ namespace Projektopgave1._2
         public BrugerKunstnerModel(IKunstnerRepository repository)
         {
             repog = repository;
-        }
+        }'
+
+        public int MyProperty { get; set; }
+
+
+
+
+
+        public int andzitoproperty { get; set; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public int silkestfu { get; set; }
         public List<Kunstner> Kunstnere { get; private set; }
         [BindProperty]
         public Kunstner Kunstner { get; set; }
