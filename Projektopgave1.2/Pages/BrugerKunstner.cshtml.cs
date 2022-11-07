@@ -11,10 +11,10 @@ namespace Projektopgave1._2
 {
     public class BrugerKunstnerModel : PageModel
     {
-        private IKunstnerRepository repo;
+        private IKunstnerRepository repog;
         public BrugerKunstnerModel(IKunstnerRepository repository)
         {
-            repo = repository;
+            repog = repository;
         }
         public List<Kunstner> Kunstnere { get; private set; }
         [BindProperty]
@@ -22,7 +22,7 @@ namespace Projektopgave1._2
         public IActionResult OnGet()
         {
             Kunstner = new Kunstner();
-            Kunstnere = repo.GetAllKunstner();
+            Kunstnere = repog.GetAllKunstner();
             return Page();
         }
     }
